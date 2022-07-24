@@ -1,15 +1,15 @@
 {
   "expo": {
-    "name": "jbarrivatickets",
-    "slug": "jbarrivatickets",
+    "name": "arriva-tickets",
+    "slug": "arriva-tickets",
     "version": "1.0.0",
-    "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "orientation": "default",
+    "icon": "./assets/arriva-with-background.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/arriva-with-background.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#00becd"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
