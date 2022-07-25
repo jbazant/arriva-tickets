@@ -18,7 +18,7 @@ export function MainTabs() {
         tabBarInactiveTintColor: COLORS.tabBarInactive,
         tabBarActiveTintColor: COLORS.white,
         tabBarStyle: {
-          backgroundColor: COLORS.tabBarBG,
+          backgroundColor: COLORS.dark,
         },
       }}>
       <Tab.Screen

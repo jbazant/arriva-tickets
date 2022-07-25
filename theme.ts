@@ -3,11 +3,10 @@ import { extendTheme } from 'native-base';
 
 export const COLORS = {
   main: '#00becd',
-  dark: '#2c2c55',
+  dark: '#333',
   secondary: '#c7f5f3',
   white: '#fff',
   muted: '#666',
-  tabBarBG: '#333',
   tabBarInactive: '#aaa',
   textDefault: '#55595e',
   textLight: '#F4F4E9',
