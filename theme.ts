@@ -20,6 +20,11 @@ export const COLORS = {
 export const theme = extendTheme({
   colors: COLORS,
   components: {
+    Button: {
+      defaultProps: {
+        m: 3,
+      },
+    },
     Divider: {
       defaultProps: {
         orientation: 'horizontal',
@@ -45,7 +50,6 @@ export const theme = extendTheme({
       defaultProps: {
         m: 3,
         mt: 1,
-        w: '75%',
       },
     },
     Text: {

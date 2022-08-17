@@ -6,7 +6,7 @@ import { MainTabs } from './MainTabs';
 const Stack = createStackNavigator<AppNavigatorParamList>();
 
 export function RootStack() {
-  const hasUser = true;
+  const hasUser = false;
   return (
     <Stack.Navigator
       screenOptions={{

@@ -1,8 +1,7 @@
-import { Entypo } from '@native-base/icons';
-import { Icon, Input, Pressable } from 'native-base';
+import { Icon, IInputProps, Input, Pressable } from 'native-base';
 import { useState } from 'react';
 
-export function PasswordInput() {
+export function PasswordInput(props: Omit<IInputProps, 'type' | 'InputRightElement'>) {
   const [passwordVisible, setPasswordVisible] = useState(false);
   return (
     <Input
@@ -16,6 +15,7 @@ export function PasswordInput() {
           <Icon name={passwordVisible ? 'eye-with-line' : 'eye'} />
         </Pressable>
       }
+      {...props}
     />
   );
 }
