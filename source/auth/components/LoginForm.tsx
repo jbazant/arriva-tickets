@@ -17,8 +17,7 @@ function fakeSubmit(data): Promise<void> {
 }
 
 export function LoginForm() {
-  const { values, formError, isSubmitting, handleSubmit, handleChange, setFormError } =
-    useForm(defaultFormValues);
+  const { values, isSubmitting, handleSubmit, handleChange } = useForm(defaultFormValues);
 
   return (
     <Box alignSelf="stretch" alignItems="stretch">
@@ -42,7 +41,8 @@ export function LoginForm() {
         onPress={handleSubmit(fakeSubmit)}
         isLoading={isSubmitting}
         spinnerPlacement="end"
-        isLoadingText="Přihlašuji">
+        isLoadingText="Přihlašuji"
+      >
         Přihlásit
       </Button>
     </Box>

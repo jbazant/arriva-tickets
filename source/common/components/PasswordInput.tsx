@@ -3,6 +3,7 @@ import { useState } from 'react';
 
 export function PasswordInput(props: Omit<IInputProps, 'type' | 'InputRightElement'>) {
   const [passwordVisible, setPasswordVisible] = useState(false);
+
   return (
     <Input
       type={passwordVisible ? 'text' : 'password'}
@@ -11,7 +12,9 @@ export function PasswordInput(props: Omit<IInputProps, 'type' | 'InputRightEleme
           onPress={() => setPasswordVisible((isVisible) => !isVisible)}
           mr={1}
           p={2}
-          accessibilityLabel={passwordVisible ? 'Skrýt heslo' : 'Zobrazit heslo'}>
+          accessibilityHint={'Přepne způsob zobrazení hesla'}
+          accessibilityLabel={passwordVisible ? 'Skrýt heslo' : 'Zobrazit heslo'}
+        >
           <Icon name={passwordVisible ? 'eye-with-line' : 'eye'} />
         </Pressable>
       }

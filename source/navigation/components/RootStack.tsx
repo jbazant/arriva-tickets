@@ -7,11 +7,13 @@ const Stack = createStackNavigator<AppNavigatorParamList>();
 
 export function RootStack() {
   const hasUser = false;
+
   return (
     <Stack.Navigator
       screenOptions={{
         headerShown: false,
-      }}>
+      }}
+    >
       {hasUser ? (
         <Stack.Screen name="MainTabs" component={MainTabs} />
       ) : (
