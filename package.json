@@ -69,7 +69,7 @@
   "jest": {
     "preset": "react-native"
   },
-  "private": true,
+  "private": false,
   "repository": "git@github.com:jbazant/arriva-tickets.git",
   "author": "Jiří Bažant <j.bazant@gmail.com>",
   "license": "MIT"
