@@ -1,4 +1,5 @@
 # Pull request checklist
+
 ## Device compatibility
 - [ ] Works on android
 - [ ] Works on iOS
