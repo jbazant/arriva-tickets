@@ -20,7 +20,8 @@ export function MainTabs() {
         tabBarStyle: {
           backgroundColor: COLORS.dark,
         },
-      }}>
+      }}
+    >
       <Tab.Screen
         name={'RecentTickets'}
         component={RecentTicketsTab}
