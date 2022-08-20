@@ -1,0 +1,40 @@
+name: Publish
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  validate_master:
+    uses: ./.github/workflows/00-lint-test.yml
+    secrets: inherit
+
+  publish:
+    needs: validate_master
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [16.x]
+
+    steps:
+      - name: 🏗 Setup repo
+        uses: actions/checkout@v2
+
+      - name: 🪚 Setup Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: 🛠 Setup Expo
+        uses: expo/expo-github-action@v7
+        with:
+          expo-version: latest
+          token: ${{ secrets.EXPO_TOKEN }}
+
+      - name: 📦 Install dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: 🚀 Publish app
+        run: expo publish --non-interactive

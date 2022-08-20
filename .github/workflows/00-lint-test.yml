@@ -1,0 +1,33 @@
+name: Lint and test
+
+on:
+  workflow_call:
+
+jobs:
+  lint-test:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [16.x]
+
+    steps:
+      - name: 🏗 Setup repo
+        uses: actions/checkout@v2
+
+      - name: 🪚 Setup Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: 📦 Install dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: 🔦 Validate typescript
+        run: yarn tsc
+
+      - name: 🔎 Run lint
+        run: yarn lint
+
+      - name: 🪲 Run tests
+        run: yarn test

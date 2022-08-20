@@ -1,0 +1,10 @@
+name: On pull-request
+
+on:
+  pull_request:
+    branches: [master]
+
+jobs:
+  validate_pr:
+    uses: ./.github/workflows/00-lint-test.yml
+    secrets: inherit
