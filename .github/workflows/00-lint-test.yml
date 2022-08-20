@@ -23,7 +23,7 @@ jobs:
       - name: 📦 Install dependencies
         run: yarn install --frozen-lockfile
 
-      - nme: 🔦 Validate typescript
+      - name: 🔦 Validate typescript
         run: yarn tsc
 
       - name: 🔎 Run lint
