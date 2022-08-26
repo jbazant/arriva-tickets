@@ -1,20 +1,17 @@
-import { useCallback, useState } from 'react';
 import { deleteItemAsync, getItemAsync, setItemAsync } from 'expo-secure-store';
+import { useCallback, useState } from 'react';
 import { useAsyncEffect } from '../../common/hooks/useAsyncEffect';
-
-export type UserDataJson = { username: string; password: string; token: string };
-
-export type CurrentUserControls = {
-  isFetching: boolean;
-  persist: (userData: UserDataJson) => Promise<void>;
-  clear: () => Promise<void>;
-};
+import { CurrentUserData, NoUserData, UserDataJson } from '../types/UserData';
 
 const STORED_ITEM_KEY = 'user';
 
-export function useCurrentUser(): CurrentUserControls | (UserDataJson & CurrentUserControls) {
+function hasUserData(data: Record<string, any>): data is UserDataJson {
+  return 'token' in data;
+}
+
+export function useCurrentUser(): NoUserData | CurrentUserData {
   const [isFetching, setFetching] = useState(true);
-  const [userData, setUserData] = useState({});
+  const [userData, setUserData] = useState<UserDataJson | Record<string, never>>({});
 
   useAsyncEffect(
     async (getMounted) => {
@@ -47,5 +44,9 @@ export function useCurrentUser(): CurrentUserControls | (UserDataJson & CurrentU
     await deleteItemAsync(STORED_ITEM_KEY);
   }, []);
 
-  return { isFetching, persist, clear, ...userData };
+  if (hasUserData(userData)) {
+    return { isFetching, persist, clear, hasUser: true, ...userData };
+  }
+
+  return { isFetching, persist, clear, hasUser: false };
 }

@@ -38,7 +38,8 @@
     "react-native-svg": "12.3.0",
     "react-native-swipeable": "^0.6.0",
     "react-native-web": "0.17.7",
-    "react-query": "^3.39.1"
+    "react-query": "^3.39.1",
+    "ts-invariant": "^0.10.3"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",

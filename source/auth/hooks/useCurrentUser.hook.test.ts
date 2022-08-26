@@ -29,6 +29,7 @@ describe('useCurrentuser', () => {
         isFetching: true,
         persist: expect.any(Function),
         clear: expect.any(Function),
+        hasUser: false,
       });
     });
 
@@ -46,6 +47,7 @@ describe('useCurrentuser', () => {
         username: 'USERNAME',
         password: 'PASSWORD',
         token: 'TOKEN',
+        hasUser: true,
       });
     });
 
@@ -58,6 +60,7 @@ describe('useCurrentuser', () => {
         isFetching: false,
         persist: expect.any(Function),
         clear: expect.any(Function),
+        hasUser: false,
       });
     });
   });
@@ -102,6 +105,7 @@ describe('useCurrentuser', () => {
         username: 'USERNAME',
         password: 'PASSWORD',
         token: 'TOKEN',
+        hasUser: true,
       });
     });
   });
@@ -132,6 +136,7 @@ describe('useCurrentuser', () => {
         isFetching: false,
         persist: expect.any(Function),
         clear: expect.any(Function),
+        hasUser: false,
       });
     });
   });

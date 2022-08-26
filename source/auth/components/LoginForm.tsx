@@ -1,23 +1,24 @@
 import { Box, Button, Input, Text } from 'native-base';
 import { PasswordInput } from '../../common/components/PasswordInput';
 import { useForm } from '../../common/hooks/useForm';
+import { useUserControls } from '../hooks/useUserData';
 
 const defaultFormValues = {
   login: '',
   password: '',
 };
 
-function fakeSubmit(data): Promise<void> {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      console.warn(data);
-      resolve();
-    }, 2e3);
-  });
-}
-
 export function LoginForm() {
   const { values, isSubmitting, handleSubmit, handleChange } = useForm(defaultFormValues);
+  const { persist } = useUserControls();
+
+  const fakeSubmit = ({ login, password }: typeof defaultFormValues): Promise<void> =>
+    new Promise((resolve) => {
+      setTimeout(async () => {
+        await persist({ username: login, password, token: 'FAKE_TOKEN' });
+        resolve();
+      }, 2e3);
+    });
 
   return (
     <Box alignSelf="stretch" alignItems="stretch">
