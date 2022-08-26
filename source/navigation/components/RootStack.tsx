@@ -1,24 +1,18 @@
-import { createStackNavigator } from '@react-navigation/stack';
 import { LoginScreen } from '../../auth/components/LoginScreen';
-import { AppNavigatorParamList } from '../types';
+import { useUserControls } from '../../auth/hooks/useUserData';
+import { ScreenWrap } from '../../common/components/ScreenWrap';
 import { MainTabs } from './MainTabs';
 
-const Stack = createStackNavigator<AppNavigatorParamList>();
-
 export function RootStack() {
-  const hasUser = false;
+  const { hasUser, isFetching } = useUserControls();
 
-  return (
-    <Stack.Navigator
-      screenOptions={{
-        headerShown: false,
-      }}
-    >
-      {hasUser ? (
-        <Stack.Screen name="MainTabs" component={MainTabs} />
-      ) : (
-        <Stack.Screen name="LoginScreen" component={LoginScreen} />
-      )}
-    </Stack.Navigator>
-  );
+  if (isFetching) {
+    return <ScreenWrap />;
+  }
+
+  if (hasUser) {
+    return <MainTabs />;
+  }
+
+  return <LoginScreen />;
 }

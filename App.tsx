@@ -3,6 +3,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { StatusBar } from 'expo-status-bar';
 import { NativeBaseProvider } from 'native-base';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { UserProvider } from './source/auth/components/UserProvider';
 import { RootStack } from './source/navigation/components/RootStack';
 import { theme } from './theme';
 
@@ -11,9 +12,11 @@ export default function App() {
     <NativeBaseProvider theme={theme}>
       <SafeAreaProvider>
         <StatusBar style="light" />
-        <NavigationContainer>
-          <RootStack />
-        </NavigationContainer>
+        <UserProvider>
+          <NavigationContainer>
+            <RootStack />
+          </NavigationContainer>
+        </UserProvider>
       </SafeAreaProvider>
     </NativeBaseProvider>
   );

@@ -3,7 +3,6 @@
 ## Device compatibility
 - [ ] Works on android
 - [ ] Works on iOS
-- [ ] Works on web
 - [ ] Works on device with a notch
 
 ## Usability checks
