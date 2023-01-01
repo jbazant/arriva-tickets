@@ -2344,7 +2344,7 @@
 
 "@react-native-async-storage/async-storage@~1.17.3":
   version "1.17.11"
-  resolved "https://corfu.memsource.com/repository/npm-memsource-group/@react-native-async-storage/async-storage/-/async-storage-1.17.11.tgz#7ec329c1b9f610e344602e806b04d7c928a2341d"
+  resolved "https://registry.yarnpkg.com/@react-native-async-storage/async-storage/-/async-storage-1.17.11.tgz#7ec329c1b9f610e344602e806b04d7c928a2341d"
   integrity sha512-bzs45n5HNcDq6mxXnSsOHysZWn1SbbebNxldBXCQs8dSvF8Aor9KCdpm+TpnnGweK3R6diqsT8lFhX77VX0NFw==
   dependencies:
     merge-options "^3.0.4"
@@ -2520,7 +2520,7 @@
 
 "@react-native-community/netinfo@8.2.0":
   version "8.2.0"
-  resolved "https://corfu.memsource.com/repository/npm-memsource-group/@react-native-community/netinfo/-/netinfo-8.2.0.tgz#0bcf2b618c3b0ab72bb5529df3e580af9e6ae96b"
+  resolved "https://registry.yarnpkg.com/@react-native-community/netinfo/-/netinfo-8.2.0.tgz#0bcf2b618c3b0ab72bb5529df3e580af9e6ae96b"
   integrity sha512-mPMg9Uu2XeMX3tainvCWLhD9FZtdox3fcbPXJINuyFNgEQ2AUhGcoUT1dUpcFZrY4eXYiO9cckPhPHq9lWzSAA==
 
 "@react-native-masked-view/masked-view@0.2.6":
@@ -2994,31 +2994,31 @@
 
 "@tanstack/query-async-storage-persister@^4.20.4":
   version "4.20.4"
-  resolved "https://corfu.memsource.com/repository/npm-memsource-group/@tanstack/query-async-storage-persister/-/query-async-storage-persister-4.20.4.tgz#08ec60ae80c9e69aea162f7bf00523901eb654ed"
+  resolved "https://registry.yarnpkg.com/@tanstack/query-async-storage-persister/-/query-async-storage-persister-4.20.4.tgz#08ec60ae80c9e69aea162f7bf00523901eb654ed"
   integrity sha512-Ib/TMCd4z47/g9cOM+HlIO2zmT510ZE26tMh60ClqquvgpERl9xtts1PsVVfWLE3Y4yqHMnUlWjIy1UiEhQcpQ==
   dependencies:
     "@tanstack/query-persist-client-core" "4.20.4"
 
 "@tanstack/query-core@4.20.4":
   version "4.20.4"
-  resolved "https://corfu.memsource.com/repository/npm-memsource-group/@tanstack/query-core/-/query-core-4.20.4.tgz#1f7975a2db26a8bc2f382bad8a44cd422c846b17"
+  resolved "https://registry.yarnpkg.com/@tanstack/query-core/-/query-core-4.20.4.tgz#1f7975a2db26a8bc2f382bad8a44cd422c846b17"
   integrity sha512-lhLtGVNJDsJ/DyZXrLzekDEywQqRVykgBqTmkv0La32a/RleILXy6JMLBb7UmS3QCatg/F/0N9/5b0i5j6IKcA==
 
 "@tanstack/query-persist-client-core@4.20.4":
   version "4.20.4"
-  resolved "https://corfu.memsource.com/repository/npm-memsource-group/@tanstack/query-persist-client-core/-/query-persist-client-core-4.20.4.tgz#cd4b408b4f36645f3b06cce4b757df8c755e713f"
+  resolved "https://registry.yarnpkg.com/@tanstack/query-persist-client-core/-/query-persist-client-core-4.20.4.tgz#cd4b408b4f36645f3b06cce4b757df8c755e713f"
   integrity sha512-MzrRC9esSEpD/kY28Zi4YqkWvuOUmpO67vpgCkQszOLbAHLMeEibId3njXxIZXDPg5fvX3HaAwFS7GheuMuKFg==
 
 "@tanstack/react-query-persist-client@^4.20.4":
   version "4.20.4"
-  resolved "https://corfu.memsource.com/repository/npm-memsource-group/@tanstack/react-query-persist-client/-/react-query-persist-client-4.20.4.tgz#f433e5723bf1ae4d764327faa23c26b45814eefb"
+  resolved "https://registry.yarnpkg.com/@tanstack/react-query-persist-client/-/react-query-persist-client-4.20.4.tgz#f433e5723bf1ae4d764327faa23c26b45814eefb"
   integrity sha512-fJvYdULQEa+PV7M3WzWNPWiP/VmWflyiISwIzu2/wC6TnsH7CzXwUwy5PvTl89AR26GR0/U5J6f+oS6JhLVJxQ==
   dependencies:
     "@tanstack/query-persist-client-core" "4.20.4"
 
 "@tanstack/react-query@^4.20.4":
   version "4.20.4"
-  resolved "https://corfu.memsource.com/repository/npm-memsource-group/@tanstack/react-query/-/react-query-4.20.4.tgz#562b34fb919adea884eccaba2b5be50e8ba7fb16"
+  resolved "https://registry.yarnpkg.com/@tanstack/react-query/-/react-query-4.20.4.tgz#562b34fb919adea884eccaba2b5be50e8ba7fb16"
   integrity sha512-SJRxx13k/csb9lXAJfycgVA1N/yU/h3bvRNWP0+aHMfMjmbyX82FdoAcckDBbOdEyAupvb0byelNHNeypCFSyA==
   dependencies:
     "@tanstack/query-core" "4.20.4"
@@ -6399,7 +6399,7 @@ is-path-inside@^3.0.2:
 
 is-plain-obj@^2.1.0:
   version "2.1.0"
-  resolved "https://corfu.memsource.com/repository/npm-memsource-group/is-plain-obj/-/is-plain-obj-2.1.0.tgz#45e42e37fccf1f40da8e5f76ee21515840c09287"
+  resolved "https://registry.yarnpkg.com/is-plain-obj/-/is-plain-obj-2.1.0.tgz#45e42e37fccf1f40da8e5f76ee21515840c09287"
   integrity sha512-YWnfyRwxL/+SsrWYfOpUtz5b3YD+nyfkHvjbcanzk8zgyO4ASD67uVMRt8k5bM4lLMDnXfriRhOpemw+NfT1eA==
 
 is-plain-object@^2.0.3, is-plain-object@^2.0.4:
@@ -7531,7 +7531,7 @@ memory-cache@~0.2.0:
 
 merge-options@^3.0.4:
   version "3.0.4"
-  resolved "https://corfu.memsource.com/repository/npm-memsource-group/merge-options/-/merge-options-3.0.4.tgz#84709c2aa2a4b24c1981f66c179fe5565cc6dbb7"
+  resolved "https://registry.yarnpkg.com/merge-options/-/merge-options-3.0.4.tgz#84709c2aa2a4b24c1981f66c179fe5565cc6dbb7"
   integrity sha512-2Sug1+knBjkaMsMgf1ctR1Ujx+Ayku4EdJN4Z+C2+JzoeF7A3OZ9KM2GY0CpQS51NR61LTurMJrRKPhSs3ZRTQ==
   dependencies:
     is-plain-obj "^2.1.0"
@@ -10411,7 +10411,7 @@ url-parse@^1.5.9:
 
 use-sync-external-store@^1.2.0:
   version "1.2.0"
-  resolved "https://corfu.memsource.com/repository/npm-memsource-group/use-sync-external-store/-/use-sync-external-store-1.2.0.tgz#7dbefd6ef3fe4e767a0cf5d7287aacfb5846928a"
+  resolved "https://registry.yarnpkg.com/use-sync-external-store/-/use-sync-external-store-1.2.0.tgz#7dbefd6ef3fe4e767a0cf5d7287aacfb5846928a"
   integrity sha512-eEgnFxGQ1Ife9bzYs6VLi8/4X6CObHMw9Qr9tPY43iKwsPw8xE8+EFsf/2cFZ5S3esXgpWgtSCtLNS41F+sKPA==
 
 use@^3.1.0:
