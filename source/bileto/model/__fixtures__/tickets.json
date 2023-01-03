@@ -1,0 +1,1375 @@
+[
+  {
+    "Id": "ad7da8e2-d7e9-42d0-bcbf-d4a163f30066",
+    "CustomerId": "7b78b17e-b042-4b48-a331-2bd6c7036f94",
+    "SoldBy": null,
+    "PortalId": "ef8678a3-2d6a-4974-b0ab-ba32189f5840",
+    "ExpiresAt": "2019-11-15T23:19:51+00:00",
+    "CreatedAt": "2019-11-15T22:44:51+00:00",
+    "UpdatedAt": "2019-11-15T22:51:34+00:00",
+    "DeletedAt": null,
+    "CancelledAt": null,
+    "FinishedAt": "2019-11-15T22:51:33+00:00",
+    "Code": "RGBMKBZ",
+    "Snapshot": {
+      "Version": 2,
+      "Portal": {
+        "Id": "ef8678a3-2d6a-4974-b0ab-ba32189f5840",
+        "Name": "ARRIVA CZ",
+        "Currency": "CZK",
+        "CompanyName": "ARRIVA TRANSPORT ČESKÁ REPUBLIKA a.s.",
+        "CompanyId": "27368815",
+        "VatId": "",
+        "Address": "Křižíkova 148/34, Karlín, Praha 8",
+        "Zip": "186 00",
+        "Country": "Česká republika",
+        "ContactPhone": "+420725100725",
+        "ContactEmail": "info@arriva.cz"
+      }
+    },
+    "PhoneNumber": "00420723734678",
+    "Customer": null,
+    "Items": [
+      {
+        "Id": "3826ab08-f46a-4645-9430-58c5db16c9ed",
+        "Code": "28A2Y3E",
+        "OrderId": "ad7da8e2-d7e9-42d0-bcbf-d4a163f30066",
+        "Prices": {
+          "providerOriginalPrice": null,
+          "version": 1,
+          "portalPrice": {
+            "amount": 89,
+            "currency": "CZK"
+          },
+          "userPrice": {
+            "amount": 89,
+            "currency": "CZK"
+          },
+          "providerPrice": null
+        },
+        "ConnectionId": "300232dd-38cd-453b-84d5-3202b4a157c3",
+        "Connection": null,
+        "CancellationRuleId": "78037d3f-4ce1-4838-a53a-4767867d509c",
+        "ParentOrderItemId": null,
+        "Cancel": {},
+        "PackageId": null,
+        "Completed": true,
+        "Snapshot": {
+          "Version": 2,
+          "Price": {
+            "providerOriginalPrice": null,
+            "version": 1,
+            "portalPrice": {
+              "amount": 89,
+              "currency": "CZK"
+            },
+            "userPrice": {
+              "amount": 89,
+              "currency": "CZK"
+            },
+            "providerPrice": null
+          },
+          "Transactions": [
+            {
+              "Id": "cb475e8d-e5bf-4a7a-8be6-fbace62877d6",
+              "Prices": {
+                "providerOriginalPrice": {
+                  "amount": 89,
+                  "currency": "CZK"
+                },
+                "version": 1,
+                "portalPrice": {
+                  "amount": 89,
+                  "currency": "CZK"
+                },
+                "userPrice": {
+                  "amount": 89,
+                  "currency": "CZK"
+                },
+                "providerPrice": {
+                  "amount": 89,
+                  "currency": "CZK"
+                }
+              },
+              "Leg": {
+                "Id": "0f051a45-645c-4093-9f57-9ced44ce2927",
+                "ArrivalAt": "2019-11-21T17:36:00+0000",
+                "ArrivalStation": {
+                  "Id": "0237cf28-27ae-4486-8f94-df50934ccbd2",
+                  "Name": "Teplice, Benešovo náměstí",
+                  "Timezone": "Europe/Prague"
+                },
+                "DepartureAt": "2019-11-21T16:30:00+0000",
+                "DepartureStation": {
+                  "Id": "89d65ac5-a2fb-44fd-ba75-a27b326c942a",
+                  "Name": "Praha, Nádraží Holešovice",
+                  "Timezone": "Europe/Prague"
+                },
+                "IsInternational": false,
+                "Trip": {
+                  "Id": "20e33f52-4d02-4275-bbb9-ae508710fe43",
+                  "Code": "16",
+                  "Provider": {
+                    "Id": "7ae7fed5-80bd-47a8-ad5d-8b5bf1e6ed17",
+                    "Name": "ARRIVA CZ"
+                  },
+                  "Operator": {
+                    "Id": "6c74e651-d8ab-4291-8a69-5fd4206627a1",
+                    "Name": "ARRIVA CITY s.r.o.",
+                    "CompanyId": null,
+                    "Address": "U Stavoservisu 692/1b, 108 00 Praha 10 – Malešice",
+                    "VatId": "CZ699001947",
+                    "Zip": null,
+                    "Country": "Česká Republika",
+                    "ContactPhone": "+420725100725",
+                    "ContactEmail": "info@arriva.cz",
+                    "Config": []
+                  },
+                  "Route": {
+                    "Id": "f73bb329-715b-4261-a0f7-c072aa6d9650",
+                    "Name": "580916",
+                    "FullName": "Teplice-Praha",
+                    "Operator": {
+                      "Id": "9f66043a-4543-48de-94cb-0c87a10f74a2",
+                      "Name": "ARRIVA TEPLICE s.r.o.",
+                      "CompanyId": null,
+                      "Address": null,
+                      "VatId": null,
+                      "Zip": null,
+                      "Country": null,
+                      "ContactPhone": null,
+                      "ContactEmail": null,
+                      "Config": []
+                    },
+                    "VehicleCategory": {
+                      "Id": "015ff99a-8665-4138-ad91-974e54563a7c",
+                      "Type": "bus"
+                    }
+                  }
+                }
+              },
+              "Type": "Ticket",
+              "Item": {
+                "Id": "5311fa03-184c-45d6-a4c6-8c6bf92676a7",
+                "Code": "RPG",
+                "CategoryRate": null,
+                "Tariff": {
+                  "Name": {
+                    "cs_CZ": {
+                      "Name": "Obyčejné jízdné"
+                    },
+                    "en_US": {
+                      "Name": "Regular fare"
+                    },
+                    "hu_HU": {
+                      "Name": "Hagyományos menetdíj"
+                    },
+                    "sk_SK": {
+                      "Name": "Základné cestovné"
+                    }
+                  },
+                  "Conditions": [
+                    {
+                      "AgeMin": 18,
+                      "AgeMax": 64,
+                      "Cards": []
+                    }
+                  ]
+                },
+                "Passenger": {
+                  "Id": "279a3f66-8e52-4cf3-8455-5accd30f5770",
+                  "Age": 18,
+                  "FirstName": null,
+                  "LastName": null,
+                  "Cards": []
+                },
+                "Seat": {
+                  "Id": "f525bed2-fe31-4c40-ba27-5799dc051e4c",
+                  "Label": "26",
+                  "Number": "26",
+                  "Coach": {
+                    "VehicleCoach": {
+                      "Label": null
+                    }
+                  }
+                },
+                "Type": "standard",
+                "ValidSince": "2019-11-21T04:30:00+0000",
+                "ValidUntil": "2019-11-21T17:36:00+0000"
+              },
+              "UpsellItems": [],
+              "Price": {
+                "amount": 89,
+                "currency": "CZK"
+              },
+              "PriceWithoutVat": {
+                "amount": 80.91,
+                "currency": "CZK"
+              },
+              "Vat": 10,
+              "VatAmount": {
+                "amount": 8.09,
+                "currency": "CZK"
+              }
+            }
+          ],
+          "Legs": {
+            "0f051a45-645c-4093-9f57-9ced44ce2927": {
+              "Price": {
+                "amount": 89,
+                "currency": "CZK"
+              }
+            }
+          }
+        },
+        "ExpiresAt": null,
+        "CancelledAt": "2019-11-20T22:43:14+00:00",
+        "CreatedAt": "2019-11-15T22:47:59+00:00",
+        "UpdatedAt": "2019-11-15T22:48:08+00:00",
+        "DeletedAt": null,
+        "Order": null,
+        "Transactions": [
+          {
+            "Id": "cb475e8d-e5bf-4a7a-8be6-fbace62877d6",
+            "OrderItemId": "3826ab08-f46a-4645-9430-58c5db16c9ed",
+            "Prices": {
+              "providerOriginalPrice": {
+                "amount": 89,
+                "currency": "CZK"
+              },
+              "version": 1,
+              "portalPrice": {
+                "amount": 89,
+                "currency": "CZK"
+              },
+              "userPrice": {
+                "amount": 89,
+                "currency": "CZK"
+              },
+              "providerPrice": {
+                "amount": 89,
+                "currency": "CZK"
+              }
+            },
+            "ItemId": "5311fa03-184c-45d6-a4c6-8c6bf92676a7",
+            "ItemType": "Ticket",
+            "ItemData": {},
+            "VAT": 10,
+            "LegId": "0f051a45-645c-4093-9f57-9ced44ce2927",
+            "ProviderId": null,
+            "DeletedAt": null,
+            "Provider": null,
+            "OrderItem": null,
+            "Item": null,
+            "Leg": {
+              "Id": "0f051a45-645c-4093-9f57-9ced44ce2927",
+              "ConnectionId": "300232dd-38cd-453b-84d5-3202b4a157c3",
+              "ConnectionSequence": 0,
+              "DepartureStation": {
+                "Id": "89d65ac5-a2fb-44fd-ba75-a27b326c942a",
+                "Name": "Praha, Nádraží Holešovice",
+                "CountryCode": "CZ",
+                "Lat": 50.11031,
+                "Lng": 14.441406,
+                "Timezone": "Europe/Prague",
+                "IsTerminal": false,
+                "IsSearchable": false,
+                "Type": ["bus"],
+                "MinTransferTime": null,
+                "OperationSince": null,
+                "OperationUntil": null,
+                "AdminLevel1": "Hlavní město Praha",
+                "AdminLevel2": "Praha",
+                "AdminLevel3": null,
+                "UpdatedAt": "2016-04-19T13:03:01+00:00",
+                "DeletedAt": null
+              },
+              "DepartureStationId": "89d65ac5-a2fb-44fd-ba75-a27b326c942a",
+              "ArrivalStation": {
+                "Id": "0237cf28-27ae-4486-8f94-df50934ccbd2",
+                "Name": "Teplice, Benešovo náměstí",
+                "CountryCode": "CZ",
+                "Lat": 50.642132,
+                "Lng": 13.826573,
+                "Timezone": "Europe/Prague",
+                "IsTerminal": false,
+                "IsSearchable": false,
+                "Type": ["bus"],
+                "MinTransferTime": null,
+                "OperationSince": null,
+                "OperationUntil": null,
+                "AdminLevel1": "Ústecký kraj",
+                "AdminLevel2": "Teplice",
+                "AdminLevel3": null,
+                "UpdatedAt": "2016-02-22T19:08:21+00:00",
+                "DeletedAt": null
+              },
+              "ArrivalStationId": "0237cf28-27ae-4486-8f94-df50934ccbd2",
+              "DepartureAt": "2019-11-21T17:30:00+01:00",
+              "ArrivalAt": "2019-11-21T18:36:00+01:00",
+              "TripId": "20e33f52-4d02-4275-bbb9-ae508710fe43",
+              "Trip": null,
+              "TripDate": "2019-11-21T00:00:00+00:00",
+              "TransitStops": null,
+              "TransitStopIds": ["d6a193ae-f92c-4c77-b22f-483941d3541b"],
+              "Distance": "88000",
+              "IsBuyable": false,
+              "BuyabilityReason": {
+                "identifier": "TOO_LATE",
+                "url": null,
+                "urlLabel": null
+              },
+              "Status": {
+                "Type": "ok",
+                "Value": null,
+                "CreatedAt": null,
+                "Description": null
+              },
+              "FreeSeatsCount": null,
+              "OccupiedSeatsCount": null,
+              "NotBuyableSeatsCount": null,
+              "Connection": null
+            },
+            "UpsellItems": null
+          }
+        ],
+        "CancellationRule": null
+      },
+      {
+        "Id": "50b671f7-3db0-4dc1-b40e-6f963bbf66f0",
+        "Code": "APJHRCU",
+        "OrderId": "ad7da8e2-d7e9-42d0-bcbf-d4a163f30066",
+        "Prices": {
+          "providerOriginalPrice": null,
+          "version": 1,
+          "portalPrice": {
+            "amount": 84,
+            "currency": "CZK"
+          },
+          "userPrice": {
+            "amount": 84,
+            "currency": "CZK"
+          },
+          "providerPrice": null
+        },
+        "ConnectionId": "78a52091-d87d-4b1f-8ba2-fbc7806cd8c7",
+        "Connection": null,
+        "CancellationRuleId": "78037d3f-4ce1-4838-a53a-4767867d509c",
+        "ParentOrderItemId": null,
+        "Cancel": {},
+        "PackageId": null,
+        "Completed": true,
+        "Snapshot": {
+          "Version": 2,
+          "Price": {
+            "providerOriginalPrice": null,
+            "version": 1,
+            "portalPrice": {
+              "amount": 84,
+              "currency": "CZK"
+            },
+            "userPrice": {
+              "amount": 84,
+              "currency": "CZK"
+            },
+            "providerPrice": null
+          },
+          "Transactions": [
+            {
+              "Id": "1d1b8794-bf70-40b8-a302-5c051740fa18",
+              "Prices": {
+                "providerOriginalPrice": {
+                  "amount": 84,
+                  "currency": "CZK"
+                },
+                "version": 1,
+                "portalPrice": {
+                  "amount": 84,
+                  "currency": "CZK"
+                },
+                "userPrice": {
+                  "amount": 84,
+                  "currency": "CZK"
+                },
+                "providerPrice": {
+                  "amount": 84,
+                  "currency": "CZK"
+                }
+              },
+              "Leg": {
+                "Id": "2014b1dc-b9ec-4d93-8d51-1edf2d9b6d8e",
+                "ArrivalAt": "2019-11-21T05:40:00+0000",
+                "ArrivalStation": {
+                  "Id": "89d65ac5-a2fb-44fd-ba75-a27b326c942a",
+                  "Name": "Praha, Nádraží Holešovice",
+                  "Timezone": "Europe/Prague"
+                },
+                "DepartureAt": "2019-11-21T04:40:00+0000",
+                "DepartureStation": {
+                  "Id": "0237cf28-27ae-4486-8f94-df50934ccbd2",
+                  "Name": "Teplice, Benešovo náměstí",
+                  "Timezone": "Europe/Prague"
+                },
+                "IsInternational": false,
+                "Trip": {
+                  "Id": "888b835b-e02f-4648-9b83-55a1264a3948",
+                  "Code": "25",
+                  "Provider": {
+                    "Id": "7ae7fed5-80bd-47a8-ad5d-8b5bf1e6ed17",
+                    "Name": "ARRIVA CZ"
+                  },
+                  "Operator": {
+                    "Id": "6c74e651-d8ab-4291-8a69-5fd4206627a1",
+                    "Name": "ARRIVA CITY s.r.o.",
+                    "CompanyId": null,
+                    "Address": "U Stavoservisu 692/1b, 108 00 Praha 10 – Malešice",
+                    "VatId": "CZ699001947",
+                    "Zip": null,
+                    "Country": "Česká Republika",
+                    "ContactPhone": "+420725100725",
+                    "ContactEmail": "info@arriva.cz",
+                    "Config": []
+                  },
+                  "Route": {
+                    "Id": "f73bb329-715b-4261-a0f7-c072aa6d9650",
+                    "Name": "580916",
+                    "FullName": "Teplice-Praha",
+                    "Operator": {
+                      "Id": "9f66043a-4543-48de-94cb-0c87a10f74a2",
+                      "Name": "ARRIVA TEPLICE s.r.o.",
+                      "CompanyId": null,
+                      "Address": null,
+                      "VatId": null,
+                      "Zip": null,
+                      "Country": null,
+                      "ContactPhone": null,
+                      "ContactEmail": null,
+                      "Config": []
+                    },
+                    "VehicleCategory": {
+                      "Id": "015ff99a-8665-4138-ad91-974e54563a7c",
+                      "Type": "bus"
+                    }
+                  }
+                }
+              },
+              "Type": "Ticket",
+              "Item": {
+                "Id": "21187bc5-db83-43cf-81b4-9c5e7ef960a4",
+                "Code": "2CV",
+                "CategoryRate": null,
+                "Tariff": {
+                  "Name": {
+                    "cs_CZ": {
+                      "Name": "Obyčejné jízdné"
+                    },
+                    "en_US": {
+                      "Name": "Regular fare"
+                    },
+                    "hu_HU": {
+                      "Name": "Hagyományos menetdíj"
+                    },
+                    "sk_SK": {
+                      "Name": "Základné cestovné"
+                    }
+                  },
+                  "Conditions": [
+                    {
+                      "AgeMin": 18,
+                      "AgeMax": 64,
+                      "Cards": []
+                    }
+                  ]
+                },
+                "Passenger": {
+                  "Id": "29a5634c-4089-4457-b61c-72fcf59cfe53",
+                  "Age": 18,
+                  "FirstName": null,
+                  "LastName": null,
+                  "Cards": []
+                },
+                "Seat": {
+                  "Id": "ef7a569d-f035-4270-9f23-ab985a03ff7d",
+                  "Label": "25",
+                  "Number": "25",
+                  "Coach": {
+                    "VehicleCoach": {
+                      "Label": null
+                    }
+                  }
+                },
+                "Type": "standard",
+                "ValidSince": "2019-11-20T16:40:00+0000",
+                "ValidUntil": "2019-11-21T05:40:00+0000"
+              },
+              "UpsellItems": [],
+              "Price": {
+                "amount": 84,
+                "currency": "CZK"
+              },
+              "PriceWithoutVat": {
+                "amount": 76.36,
+                "currency": "CZK"
+              },
+              "Vat": 10,
+              "VatAmount": {
+                "amount": 7.64,
+                "currency": "CZK"
+              }
+            }
+          ],
+          "Legs": {
+            "2014b1dc-b9ec-4d93-8d51-1edf2d9b6d8e": {
+              "Price": {
+                "amount": 84,
+                "currency": "CZK"
+              }
+            }
+          }
+        },
+        "ExpiresAt": null,
+        "CancelledAt": "2019-11-20T22:43:00+00:00",
+        "CreatedAt": "2019-11-15T22:45:49+00:00",
+        "UpdatedAt": "2019-11-15T22:45:57+00:00",
+        "DeletedAt": null,
+        "Order": null,
+        "Transactions": [
+          {
+            "Id": "1d1b8794-bf70-40b8-a302-5c051740fa18",
+            "OrderItemId": "50b671f7-3db0-4dc1-b40e-6f963bbf66f0",
+            "Prices": {
+              "providerOriginalPrice": {
+                "amount": 84,
+                "currency": "CZK"
+              },
+              "version": 1,
+              "portalPrice": {
+                "amount": 84,
+                "currency": "CZK"
+              },
+              "userPrice": {
+                "amount": 84,
+                "currency": "CZK"
+              },
+              "providerPrice": {
+                "amount": 84,
+                "currency": "CZK"
+              }
+            },
+            "ItemId": "21187bc5-db83-43cf-81b4-9c5e7ef960a4",
+            "ItemType": "Ticket",
+            "ItemData": {},
+            "VAT": 10,
+            "LegId": "2014b1dc-b9ec-4d93-8d51-1edf2d9b6d8e",
+            "ProviderId": null,
+            "DeletedAt": null,
+            "Provider": null,
+            "OrderItem": null,
+            "Item": null,
+            "Leg": {
+              "Id": "2014b1dc-b9ec-4d93-8d51-1edf2d9b6d8e",
+              "ConnectionId": "78a52091-d87d-4b1f-8ba2-fbc7806cd8c7",
+              "ConnectionSequence": 0,
+              "DepartureStation": {
+                "Id": "0237cf28-27ae-4486-8f94-df50934ccbd2",
+                "Name": "Teplice, Benešovo náměstí",
+                "CountryCode": "CZ",
+                "Lat": 50.642132,
+                "Lng": 13.826573,
+                "Timezone": "Europe/Prague",
+                "IsTerminal": false,
+                "IsSearchable": false,
+                "Type": ["bus"],
+                "MinTransferTime": null,
+                "OperationSince": null,
+                "OperationUntil": null,
+                "AdminLevel1": "Ústecký kraj",
+                "AdminLevel2": "Teplice",
+                "AdminLevel3": null,
+                "UpdatedAt": "2016-02-22T19:08:21+00:00",
+                "DeletedAt": null
+              },
+              "DepartureStationId": "0237cf28-27ae-4486-8f94-df50934ccbd2",
+              "ArrivalStation": {
+                "Id": "89d65ac5-a2fb-44fd-ba75-a27b326c942a",
+                "Name": "Praha, Nádraží Holešovice",
+                "CountryCode": "CZ",
+                "Lat": 50.11031,
+                "Lng": 14.441406,
+                "Timezone": "Europe/Prague",
+                "IsTerminal": false,
+                "IsSearchable": false,
+                "Type": ["bus"],
+                "MinTransferTime": null,
+                "OperationSince": null,
+                "OperationUntil": null,
+                "AdminLevel1": "Hlavní město Praha",
+                "AdminLevel2": "Praha",
+                "AdminLevel3": null,
+                "UpdatedAt": "2016-04-19T13:03:01+00:00",
+                "DeletedAt": null
+              },
+              "ArrivalStationId": "89d65ac5-a2fb-44fd-ba75-a27b326c942a",
+              "DepartureAt": "2019-11-21T05:40:00+01:00",
+              "ArrivalAt": "2019-11-21T06:40:00+01:00",
+              "TripId": "888b835b-e02f-4648-9b83-55a1264a3948",
+              "Trip": null,
+              "TripDate": "2019-11-21T00:00:00+00:00",
+              "TransitStops": null,
+              "TransitStopIds": ["6078bef8-edd6-40f5-9e81-357b5d355867"],
+              "Distance": "88000",
+              "IsBuyable": false,
+              "BuyabilityReason": {
+                "identifier": "TOO_LATE",
+                "url": null,
+                "urlLabel": null
+              },
+              "Status": {
+                "Type": "ok",
+                "Value": null,
+                "CreatedAt": null,
+                "Description": null
+              },
+              "FreeSeatsCount": null,
+              "OccupiedSeatsCount": null,
+              "NotBuyableSeatsCount": null,
+              "Connection": null
+            },
+            "UpsellItems": null
+          }
+        ],
+        "CancellationRule": null
+      },
+      {
+        "Id": "1db47b15-446f-4c91-b9ec-63ffff1a211e",
+        "Code": "N9RCCNF",
+        "OrderId": "ad7da8e2-d7e9-42d0-bcbf-d4a163f30066",
+        "Prices": {
+          "providerOriginalPrice": null,
+          "version": 1,
+          "portalPrice": {
+            "amount": 89,
+            "currency": "CZK"
+          },
+          "userPrice": {
+            "amount": 89,
+            "currency": "CZK"
+          },
+          "providerPrice": null
+        },
+        "ConnectionId": "e797fc7f-d9ab-496a-a182-d0cf331af6ac",
+        "Connection": null,
+        "CancellationRuleId": "78037d3f-4ce1-4838-a53a-4767867d509c",
+        "ParentOrderItemId": null,
+        "Cancel": {},
+        "PackageId": null,
+        "Completed": true,
+        "Snapshot": {
+          "Version": 2,
+          "Price": {
+            "providerOriginalPrice": null,
+            "version": 1,
+            "portalPrice": {
+              "amount": 89,
+              "currency": "CZK"
+            },
+            "userPrice": {
+              "amount": 89,
+              "currency": "CZK"
+            },
+            "providerPrice": null
+          },
+          "Transactions": [
+            {
+              "Id": "dc65a8ab-b057-48f8-84f3-e02840b82c53",
+              "Prices": {
+                "providerOriginalPrice": {
+                  "amount": 89,
+                  "currency": "CZK"
+                },
+                "version": 1,
+                "portalPrice": {
+                  "amount": 89,
+                  "currency": "CZK"
+                },
+                "userPrice": {
+                  "amount": 89,
+                  "currency": "CZK"
+                },
+                "providerPrice": {
+                  "amount": 89,
+                  "currency": "CZK"
+                }
+              },
+              "Leg": {
+                "Id": "eb9c7357-5afb-4a20-9f7b-4e82556deef6",
+                "ArrivalAt": "2019-11-18T05:40:00+0000",
+                "ArrivalStation": {
+                  "Id": "89d65ac5-a2fb-44fd-ba75-a27b326c942a",
+                  "Name": "Praha, Nádraží Holešovice",
+                  "Timezone": "Europe/Prague"
+                },
+                "DepartureAt": "2019-11-18T04:40:00+0000",
+                "DepartureStation": {
+                  "Id": "0237cf28-27ae-4486-8f94-df50934ccbd2",
+                  "Name": "Teplice, Benešovo náměstí",
+                  "Timezone": "Europe/Prague"
+                },
+                "IsInternational": false,
+                "Trip": {
+                  "Id": "888b835b-e02f-4648-9b83-55a1264a3948",
+                  "Code": "25",
+                  "Provider": {
+                    "Id": "7ae7fed5-80bd-47a8-ad5d-8b5bf1e6ed17",
+                    "Name": "ARRIVA CZ"
+                  },
+                  "Operator": {
+                    "Id": "6c74e651-d8ab-4291-8a69-5fd4206627a1",
+                    "Name": "ARRIVA CITY s.r.o.",
+                    "CompanyId": null,
+                    "Address": "U Stavoservisu 692/1b, 108 00 Praha 10 – Malešice",
+                    "VatId": "CZ699001947",
+                    "Zip": null,
+                    "Country": "Česká Republika",
+                    "ContactPhone": "+420725100725",
+                    "ContactEmail": "info@arriva.cz",
+                    "Config": []
+                  },
+                  "Route": {
+                    "Id": "f73bb329-715b-4261-a0f7-c072aa6d9650",
+                    "Name": "580916",
+                    "FullName": "Teplice-Praha",
+                    "Operator": {
+                      "Id": "9f66043a-4543-48de-94cb-0c87a10f74a2",
+                      "Name": "ARRIVA TEPLICE s.r.o.",
+                      "CompanyId": null,
+                      "Address": null,
+                      "VatId": null,
+                      "Zip": null,
+                      "Country": null,
+                      "ContactPhone": null,
+                      "ContactEmail": null,
+                      "Config": []
+                    },
+                    "VehicleCategory": {
+                      "Id": "015ff99a-8665-4138-ad91-974e54563a7c",
+                      "Type": "bus"
+                    }
+                  }
+                }
+              },
+              "Type": "Ticket",
+              "Item": {
+                "Id": "c14b322e-a219-4a2a-85fe-a304bf014a9a",
+                "Code": "VB4",
+                "CategoryRate": null,
+                "Tariff": {
+                  "Name": {
+                    "cs_CZ": {
+                      "Name": "Obyčejné jízdné"
+                    },
+                    "en_US": {
+                      "Name": "Regular fare"
+                    },
+                    "hu_HU": {
+                      "Name": "Hagyományos menetdíj"
+                    },
+                    "sk_SK": {
+                      "Name": "Základné cestovné"
+                    }
+                  },
+                  "Conditions": [
+                    {
+                      "AgeMin": 18,
+                      "AgeMax": 64,
+                      "Cards": []
+                    }
+                  ]
+                },
+                "Passenger": {
+                  "Id": "24473f7b-bd25-486f-8741-4ef7a3bcea82",
+                  "Age": 18,
+                  "FirstName": null,
+                  "LastName": null,
+                  "Cards": []
+                },
+                "Seat": {
+                  "Id": "56fc51d5-475c-4b91-97c7-7df68bed24bc",
+                  "Label": "21",
+                  "Number": "21",
+                  "Coach": {
+                    "VehicleCoach": {
+                      "Label": null
+                    }
+                  }
+                },
+                "Type": "standard",
+                "ValidSince": "2019-11-17T16:40:00+0000",
+                "ValidUntil": "2019-11-18T05:40:00+0000"
+              },
+              "UpsellItems": [],
+              "Price": {
+                "amount": 89,
+                "currency": "CZK"
+              },
+              "PriceWithoutVat": {
+                "amount": 80.91,
+                "currency": "CZK"
+              },
+              "Vat": 10,
+              "VatAmount": {
+                "amount": 8.09,
+                "currency": "CZK"
+              }
+            }
+          ],
+          "Legs": {
+            "eb9c7357-5afb-4a20-9f7b-4e82556deef6": {
+              "Price": {
+                "amount": 89,
+                "currency": "CZK"
+              }
+            }
+          }
+        },
+        "ExpiresAt": null,
+        "CancelledAt": null,
+        "CreatedAt": "2019-11-15T22:44:51+00:00",
+        "UpdatedAt": "2019-11-15T22:45:14+00:00",
+        "DeletedAt": null,
+        "Order": null,
+        "Transactions": [
+          {
+            "Id": "dc65a8ab-b057-48f8-84f3-e02840b82c53",
+            "OrderItemId": "1db47b15-446f-4c91-b9ec-63ffff1a211e",
+            "Prices": {
+              "providerOriginalPrice": {
+                "amount": 89,
+                "currency": "CZK"
+              },
+              "version": 1,
+              "portalPrice": {
+                "amount": 89,
+                "currency": "CZK"
+              },
+              "userPrice": {
+                "amount": 89,
+                "currency": "CZK"
+              },
+              "providerPrice": {
+                "amount": 89,
+                "currency": "CZK"
+              }
+            },
+            "ItemId": "c14b322e-a219-4a2a-85fe-a304bf014a9a",
+            "ItemType": "Ticket",
+            "ItemData": {},
+            "VAT": 10,
+            "LegId": "eb9c7357-5afb-4a20-9f7b-4e82556deef6",
+            "ProviderId": null,
+            "DeletedAt": null,
+            "Provider": null,
+            "OrderItem": null,
+            "Item": {
+              "Id": "c14b322e-a219-4a2a-85fe-a304bf014a9a",
+              "PassengerId": "24473f7b-bd25-486f-8741-4ef7a3bcea82",
+              "ConnectionId": "e797fc7f-d9ab-496a-a182-d0cf331af6ac",
+              "ValidSince": "2019-11-17T16:40:00+00:00",
+              "ValidUntil": "2019-11-18T05:40:00+00:00",
+              "MarkedAt": null,
+              "MarkedBy": null,
+              "SeatId": "56fc51d5-475c-4b91-97c7-7df68bed24bc",
+              "CategoryRateId": null,
+              "TariffId": "7c37ecb4-e434-4b65-a2ce-d814f11a176a",
+              "Tariff": null,
+              "LegId": "eb9c7357-5afb-4a20-9f7b-4e82556deef6",
+              "OrderId": "ad7da8e2-d7e9-42d0-bcbf-d4a163f30066",
+              "OrderItemId": "1db47b15-446f-4c91-b9ec-63ffff1a211e",
+              "Code": "VB4",
+              "DeletedAt": null,
+              "Connection": null,
+              "Passenger": null,
+              "Leg": null,
+              "Seat": {
+                "Id": "56fc51d5-475c-4b91-97c7-7df68bed24bc",
+                "CoachId": "cdf206c6-5dac-4b8b-a4b3-19dbc8201fbc",
+                "Number": 21,
+                "Label": "21",
+                "Type": "standard",
+                "Group": null,
+                "Priority": 0,
+                "ReversedDirection": false,
+                "Orientation": 90,
+                "Coordinates": [
+                  [594, 54],
+                  [540, 0]
+                ],
+                "ColumnIndex": 5,
+                "RowIndex": 4,
+                "Coach": null
+              },
+              "CategoryRate": null,
+              "Order": null
+            },
+            "Leg": {
+              "Id": "eb9c7357-5afb-4a20-9f7b-4e82556deef6",
+              "ConnectionId": "e797fc7f-d9ab-496a-a182-d0cf331af6ac",
+              "ConnectionSequence": 0,
+              "DepartureStation": {
+                "Id": "0237cf28-27ae-4486-8f94-df50934ccbd2",
+                "Name": "Teplice, Benešovo náměstí",
+                "CountryCode": "CZ",
+                "Lat": 50.642132,
+                "Lng": 13.826573,
+                "Timezone": "Europe/Prague",
+                "IsTerminal": false,
+                "IsSearchable": false,
+                "Type": ["bus"],
+                "MinTransferTime": null,
+                "OperationSince": null,
+                "OperationUntil": null,
+                "AdminLevel1": "Ústecký kraj",
+                "AdminLevel2": "Teplice",
+                "AdminLevel3": null,
+                "UpdatedAt": "2016-02-22T19:08:21+00:00",
+                "DeletedAt": null
+              },
+              "DepartureStationId": "0237cf28-27ae-4486-8f94-df50934ccbd2",
+              "ArrivalStation": {
+                "Id": "89d65ac5-a2fb-44fd-ba75-a27b326c942a",
+                "Name": "Praha, Nádraží Holešovice",
+                "CountryCode": "CZ",
+                "Lat": 50.11031,
+                "Lng": 14.441406,
+                "Timezone": "Europe/Prague",
+                "IsTerminal": false,
+                "IsSearchable": false,
+                "Type": ["bus"],
+                "MinTransferTime": null,
+                "OperationSince": null,
+                "OperationUntil": null,
+                "AdminLevel1": "Hlavní město Praha",
+                "AdminLevel2": "Praha",
+                "AdminLevel3": null,
+                "UpdatedAt": "2016-04-19T13:03:01+00:00",
+                "DeletedAt": null
+              },
+              "ArrivalStationId": "89d65ac5-a2fb-44fd-ba75-a27b326c942a",
+              "DepartureAt": "2019-11-18T05:40:00+01:00",
+              "ArrivalAt": "2019-11-18T06:40:00+01:00",
+              "TripId": "888b835b-e02f-4648-9b83-55a1264a3948",
+              "Trip": null,
+              "TripDate": "2019-11-18T00:00:00+00:00",
+              "TransitStops": null,
+              "TransitStopIds": ["6078bef8-edd6-40f5-9e81-357b5d355867"],
+              "Distance": "88000",
+              "IsBuyable": false,
+              "BuyabilityReason": {
+                "identifier": "TOO_LATE",
+                "url": null,
+                "urlLabel": null
+              },
+              "Status": {
+                "Type": "ok",
+                "Value": null,
+                "CreatedAt": null,
+                "Description": null
+              },
+              "FreeSeatsCount": null,
+              "OccupiedSeatsCount": null,
+              "NotBuyableSeatsCount": null,
+              "Connection": null
+            },
+            "UpsellItems": null
+          }
+        ],
+        "CancellationRule": null
+      }
+    ],
+    "Payments": null,
+    "Portal": null
+  },
+  {
+    "Id": "8d076cfd-92f8-47c1-8a2c-7e14338f8fde",
+    "CustomerId": "7b78b17e-b042-4b48-a331-2bd6c7036f94",
+    "SoldBy": null,
+    "PortalId": "ef8678a3-2d6a-4974-b0ab-ba32189f5840",
+    "ExpiresAt": "2019-11-04T13:37:56+00:00",
+    "CreatedAt": "2019-11-04T13:22:56+00:00",
+    "UpdatedAt": "2019-11-04T13:23:55+00:00",
+    "DeletedAt": null,
+    "CancelledAt": null,
+    "FinishedAt": "2019-11-04T13:23:55+00:00",
+    "Code": "RQA2XVX",
+    "Snapshot": {
+      "Version": 2,
+      "Portal": {
+        "Id": "ef8678a3-2d6a-4974-b0ab-ba32189f5840",
+        "Name": "ARRIVA CZ",
+        "Currency": "CZK",
+        "CompanyName": "ARRIVA TRANSPORT ČESKÁ REPUBLIKA a.s.",
+        "CompanyId": "27368815",
+        "VatId": "",
+        "Address": "Křižíkova 148/34, Karlín, Praha 8",
+        "Zip": "186 00",
+        "Country": "Česká republika",
+        "ContactPhone": "+420725100725",
+        "ContactEmail": "info@arriva.cz"
+      }
+    },
+    "PhoneNumber": "00420723734678",
+    "Customer": null,
+    "Items": [
+      {
+        "Id": "2317515a-806a-43c1-84e0-0ed0b43c39b2",
+        "Code": "VF9ER6R",
+        "OrderId": "8d076cfd-92f8-47c1-8a2c-7e14338f8fde",
+        "Prices": {
+          "providerOriginalPrice": null,
+          "version": 1,
+          "portalPrice": {
+            "amount": 79,
+            "currency": "CZK"
+          },
+          "userPrice": {
+            "amount": 79,
+            "currency": "CZK"
+          },
+          "providerPrice": null
+        },
+        "ConnectionId": "c1010240-bf04-41db-9720-7bc98ed1a658",
+        "Connection": null,
+        "CancellationRuleId": "78037d3f-4ce1-4838-a53a-4767867d509c",
+        "ParentOrderItemId": null,
+        "Cancel": {},
+        "PackageId": null,
+        "Completed": true,
+        "Snapshot": {
+          "Version": 2,
+          "Price": {
+            "providerOriginalPrice": null,
+            "version": 1,
+            "portalPrice": {
+              "amount": 79,
+              "currency": "CZK"
+            },
+            "userPrice": {
+              "amount": 79,
+              "currency": "CZK"
+            },
+            "providerPrice": null
+          },
+          "Transactions": [
+            {
+              "Id": "4aa0fec7-a490-4e8d-9401-2645a8666db8",
+              "Prices": {
+                "providerOriginalPrice": {
+                  "amount": 79,
+                  "currency": "CZK"
+                },
+                "version": 1,
+                "portalPrice": {
+                  "amount": 79,
+                  "currency": "CZK"
+                },
+                "userPrice": {
+                  "amount": 79,
+                  "currency": "CZK"
+                },
+                "providerPrice": {
+                  "amount": 79,
+                  "currency": "CZK"
+                }
+              },
+              "Leg": {
+                "Id": "5fbc508a-66e5-4b8c-adac-aac5fa52b0d4",
+                "ArrivalAt": "2019-11-05T21:38:00+0000",
+                "ArrivalStation": {
+                  "Id": "c72893e5-ae98-4f7b-89c0-f567b777e87d",
+                  "Name": "Teplice, Hlavní nádraží",
+                  "Timezone": "Europe/Prague"
+                },
+                "DepartureAt": "2019-11-05T20:30:00+0000",
+                "DepartureStation": {
+                  "Id": "89d65ac5-a2fb-44fd-ba75-a27b326c942a",
+                  "Name": "Praha, Nádraží Holešovice",
+                  "Timezone": "Europe/Prague"
+                },
+                "IsInternational": false,
+                "Trip": {
+                  "Id": "21bbb345-d5f4-4e0b-ae0e-5a55ce2b5ce7",
+                  "Code": "22",
+                  "Provider": {
+                    "Id": "7ae7fed5-80bd-47a8-ad5d-8b5bf1e6ed17",
+                    "Name": "ARRIVA CZ"
+                  },
+                  "Operator": {
+                    "Id": "6c74e651-d8ab-4291-8a69-5fd4206627a1",
+                    "Name": "ARRIVA CITY s.r.o.",
+                    "CompanyId": null,
+                    "Address": "U Stavoservisu 692/1b, 108 00 Praha 10 – Malešice",
+                    "VatId": "CZ699001947",
+                    "Zip": null,
+                    "Country": "Česká Republika",
+                    "ContactPhone": "+420725100725",
+                    "ContactEmail": "info@arriva.cz",
+                    "Config": []
+                  },
+                  "Route": {
+                    "Id": "f73bb329-715b-4261-a0f7-c072aa6d9650",
+                    "Name": "580916",
+                    "FullName": "Teplice-Praha",
+                    "Operator": {
+                      "Id": "9f66043a-4543-48de-94cb-0c87a10f74a2",
+                      "Name": "ARRIVA TEPLICE s.r.o.",
+                      "CompanyId": null,
+                      "Address": null,
+                      "VatId": null,
+                      "Zip": null,
+                      "Country": null,
+                      "ContactPhone": null,
+                      "ContactEmail": null,
+                      "Config": []
+                    },
+                    "VehicleCategory": {
+                      "Id": "015ff99a-8665-4138-ad91-974e54563a7c",
+                      "Type": "bus"
+                    }
+                  }
+                }
+              },
+              "Type": "Ticket",
+              "Item": {
+                "Id": "31eaf216-e3e3-48c0-af39-5bf44995d8c8",
+                "Code": "X6R",
+                "CategoryRate": null,
+                "Tariff": {
+                  "Name": {
+                    "cs_CZ": {
+                      "Name": "Obyčejné jízdné"
+                    },
+                    "en_US": {
+                      "Name": "Regular fare"
+                    },
+                    "hu_HU": {
+                      "Name": "Hagyományos menetdíj"
+                    },
+                    "sk_SK": {
+                      "Name": "Základné cestovné"
+                    }
+                  },
+                  "Conditions": [
+                    {
+                      "AgeMin": 18,
+                      "AgeMax": 64,
+                      "Cards": []
+                    }
+                  ]
+                },
+                "Passenger": {
+                  "Id": "687ce025-4d8a-4f3b-9d95-7845a4ce841c",
+                  "Age": 18,
+                  "FirstName": null,
+                  "LastName": null,
+                  "Cards": []
+                },
+                "Seat": {
+                  "Id": "ef7a569d-f035-4270-9f23-ab985a03ff7d",
+                  "Label": "25",
+                  "Number": "25",
+                  "Coach": {
+                    "VehicleCoach": {
+                      "Label": null
+                    }
+                  }
+                },
+                "Type": "standard",
+                "ValidSince": "2019-11-05T08:30:00+0000",
+                "ValidUntil": "2019-11-05T21:38:00+0000"
+              },
+              "UpsellItems": [],
+              "Price": {
+                "amount": 79,
+                "currency": "CZK"
+              },
+              "PriceWithoutVat": {
+                "amount": 71.82,
+                "currency": "CZK"
+              },
+              "Vat": 10,
+              "VatAmount": {
+                "amount": 7.18,
+                "currency": "CZK"
+              }
+            }
+          ],
+          "Legs": {
+            "5fbc508a-66e5-4b8c-adac-aac5fa52b0d4": {
+              "Price": {
+                "amount": 79,
+                "currency": "CZK"
+              }
+            }
+          }
+        },
+        "ExpiresAt": null,
+        "CancelledAt": null,
+        "CreatedAt": "2019-11-04T13:22:56+00:00",
+        "UpdatedAt": "2019-11-04T13:23:30+00:00",
+        "DeletedAt": null,
+        "Order": null,
+        "Transactions": [
+          {
+            "Id": "4aa0fec7-a490-4e8d-9401-2645a8666db8",
+            "OrderItemId": "2317515a-806a-43c1-84e0-0ed0b43c39b2",
+            "Prices": {
+              "providerOriginalPrice": {
+                "amount": 79,
+                "currency": "CZK"
+              },
+              "version": 1,
+              "portalPrice": {
+                "amount": 79,
+                "currency": "CZK"
+              },
+              "userPrice": {
+                "amount": 79,
+                "currency": "CZK"
+              },
+              "providerPrice": {
+                "amount": 79,
+                "currency": "CZK"
+              }
+            },
+            "ItemId": "31eaf216-e3e3-48c0-af39-5bf44995d8c8",
+            "ItemType": "Ticket",
+            "ItemData": {},
+            "VAT": 10,
+            "LegId": "5fbc508a-66e5-4b8c-adac-aac5fa52b0d4",
+            "ProviderId": null,
+            "DeletedAt": null,
+            "Provider": null,
+            "OrderItem": null,
+            "Item": {
+              "Id": "31eaf216-e3e3-48c0-af39-5bf44995d8c8",
+              "PassengerId": "687ce025-4d8a-4f3b-9d95-7845a4ce841c",
+              "ConnectionId": "c1010240-bf04-41db-9720-7bc98ed1a658",
+              "ValidSince": "2019-11-05T08:30:00+00:00",
+              "ValidUntil": "2019-11-05T21:38:00+00:00",
+              "MarkedAt": null,
+              "MarkedBy": null,
+              "SeatId": "ef7a569d-f035-4270-9f23-ab985a03ff7d",
+              "CategoryRateId": null,
+              "TariffId": "7c37ecb4-e434-4b65-a2ce-d814f11a176a",
+              "Tariff": null,
+              "LegId": "5fbc508a-66e5-4b8c-adac-aac5fa52b0d4",
+              "OrderId": "8d076cfd-92f8-47c1-8a2c-7e14338f8fde",
+              "OrderItemId": "2317515a-806a-43c1-84e0-0ed0b43c39b2",
+              "Code": "X6R",
+              "DeletedAt": null,
+              "Connection": null,
+              "Passenger": null,
+              "Leg": null,
+              "Seat": {
+                "Id": "ef7a569d-f035-4270-9f23-ab985a03ff7d",
+                "CoachId": "cdf206c6-5dac-4b8b-a4b3-19dbc8201fbc",
+                "Number": 25,
+                "Label": "25",
+                "Type": "standard",
+                "Group": null,
+                "Priority": 0,
+                "ReversedDirection": false,
+                "Orientation": 90,
+                "Coordinates": [
+                  [540, 54],
+                  [486, 0]
+                ],
+                "ColumnIndex": 6,
+                "RowIndex": 4,
+                "Coach": null
+              },
+              "CategoryRate": null,
+              "Order": null
+            },
+            "Leg": {
+              "Id": "5fbc508a-66e5-4b8c-adac-aac5fa52b0d4",
+              "ConnectionId": "c1010240-bf04-41db-9720-7bc98ed1a658",
+              "ConnectionSequence": 0,
+              "DepartureStation": {
+                "Id": "89d65ac5-a2fb-44fd-ba75-a27b326c942a",
+                "Name": "Praha, Nádraží Holešovice",
+                "CountryCode": "CZ",
+                "Lat": 50.11031,
+                "Lng": 14.441406,
+                "Timezone": "Europe/Prague",
+                "IsTerminal": false,
+                "IsSearchable": false,
+                "Type": ["bus"],
+                "MinTransferTime": null,
+                "OperationSince": null,
+                "OperationUntil": null,
+                "AdminLevel1": "Hlavní město Praha",
+                "AdminLevel2": "Praha",
+                "AdminLevel3": null,
+                "UpdatedAt": "2016-04-19T13:03:01+00:00",
+                "DeletedAt": null
+              },
+              "DepartureStationId": "89d65ac5-a2fb-44fd-ba75-a27b326c942a",
+              "ArrivalStation": {
+                "Id": "c72893e5-ae98-4f7b-89c0-f567b777e87d",
+                "Name": "Teplice, Hlavní nádraží",
+                "CountryCode": "CZ",
+                "Lat": 50.645924,
+                "Lng": 13.82905,
+                "Timezone": "Europe/Prague",
+                "IsTerminal": false,
+                "IsSearchable": false,
+                "Type": ["bus"],
+                "MinTransferTime": null,
+                "OperationSince": null,
+                "OperationUntil": null,
+                "AdminLevel1": "Ústecký kraj",
+                "AdminLevel2": "Teplice",
+                "AdminLevel3": null,
+                "UpdatedAt": "2016-02-22T19:08:22+00:00",
+                "DeletedAt": null
+              },
+              "ArrivalStationId": "c72893e5-ae98-4f7b-89c0-f567b777e87d",
+              "DepartureAt": "2019-11-05T21:30:00+01:00",
+              "ArrivalAt": "2019-11-05T22:38:00+01:00",
+              "TripId": "21bbb345-d5f4-4e0b-ae0e-5a55ce2b5ce7",
+              "Trip": null,
+              "TripDate": "2019-11-05T00:00:00+00:00",
+              "TransitStops": null,
+              "TransitStopIds": [
+                "c680fed3-938a-45a6-9d14-f95655d5a23a",
+                "e6192dff-281b-44dc-83dc-3b6988faf5dc"
+              ],
+              "Distance": "89000",
+              "IsBuyable": false,
+              "BuyabilityReason": {
+                "identifier": "TOO_LATE",
+                "url": null,
+                "urlLabel": null
+              },
+              "Status": {
+                "Type": "ok",
+                "Value": null,
+                "CreatedAt": null,
+                "Description": null
+              },
+              "FreeSeatsCount": null,
+              "OccupiedSeatsCount": null,
+              "NotBuyableSeatsCount": null,
+              "Connection": null
+            },
+            "UpsellItems": null
+          }
+        ],
+        "CancellationRule": null
+      }
+    ],
+    "Payments": null,
+    "Portal": null
+  }
+]

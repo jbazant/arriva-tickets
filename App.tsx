@@ -3,7 +3,8 @@ import { NavigationContainer } from '@react-navigation/native';
 import { StatusBar } from 'expo-status-bar';
 import { NativeBaseProvider } from 'native-base';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
-import { AppQueryClientProvider } from './source/auth/components/AppQueryClientProvider';
+import { BiletoApiProvider } from './source/bileto/components/BiletoApiProvider';
+import { AppQueryClientProvider } from './source/common/components/AppQueryClientProvider';
 import { UserProvider } from './source/auth/components/UserProvider';
 import { RootStack } from './source/navigation/components/RootStack';
 import { theme } from './theme';
@@ -15,9 +16,11 @@ export default function App() {
         <StatusBar style="light" />
         <AppQueryClientProvider>
           <UserProvider>
-            <NavigationContainer>
-              <RootStack />
-            </NavigationContainer>
+            <BiletoApiProvider>
+              <NavigationContainer>
+                <RootStack />
+              </NavigationContainer>
+            </BiletoApiProvider>
           </UserProvider>
         </AppQueryClientProvider>
       </SafeAreaProvider>

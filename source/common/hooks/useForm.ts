@@ -12,7 +12,11 @@ export function useForm<T, K extends keyof T>(defaultValues: T) {
     setFormError(undefined);
   };
 
-  const handleSubmit = (callback: (data: T) => Promise<void>) => async () => {
+  const onSubmit = (callback: (data: T) => any) => () => {
+    callback(values);
+  };
+
+  const handleSubmit = (callback: (data: T) => Promise<any>) => async () => {
     setSubmitting(true);
 
     try {
@@ -29,6 +33,7 @@ export function useForm<T, K extends keyof T>(defaultValues: T) {
   return {
     formError,
     handleChange,
+    onSubmit,
     handleSubmit,
     isSubmitting,
     setFormError,
