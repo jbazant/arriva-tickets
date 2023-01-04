@@ -19,5 +19,11 @@ module.exports = {
         'react-native-a11y/has-accessibility-hint': 'off',
       },
     },
+    {
+      files: ['./jest/*'],
+      rules: {
+        'import/no-extraneous-dependencies': 'off',
+      },
+    },
   ],
 };

@@ -1,7 +1,9 @@
 import { NavigationContainer } from '@react-navigation/native';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { NativeBaseProvider } from 'native-base';
 import React from 'react';
 import { UserDataContext } from '../source/auth/context/UserDataContext';
+import { BiletoApiProvider } from '../source/bileto/components/BiletoApiProvider';
 
 const inset = {
   frame: { x: 0, y: 0, width: 0, height: 0 },
@@ -18,12 +20,29 @@ const userContext = {
   token: 'TOKEN',
 };
 
-export function CommonProvidersForTests({ children }: { children?: React.ReactNode }) {
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      retry: false,
+    },
+  },
+  logger: {
+    log: console.log,
+    warn: console.warn,
+    error: process.env.NODE_ENV === 'test' ? () => {} : console.error,
+  },
+});
+
+export function CommonProvidersForTests({ children }: { children?: React.ReactElement }) {
   return (
     <NativeBaseProvider initialWindowMetrics={inset}>
-      <NavigationContainer>
-        <UserDataContext.Provider value={userContext}>{children}</UserDataContext.Provider>
-      </NavigationContainer>
+      <QueryClientProvider client={queryClient}>
+        <UserDataContext.Provider value={userContext}>
+          <BiletoApiProvider>
+            <NavigationContainer>{children}</NavigationContainer>
+          </BiletoApiProvider>
+        </UserDataContext.Provider>
+      </QueryClientProvider>
     </NativeBaseProvider>
   );
 }
