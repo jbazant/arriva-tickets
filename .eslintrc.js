@@ -20,7 +20,7 @@ module.exports = {
       },
     },
     {
-      files: ['./jest/*'],
+      files: ['./jest/*', './**/*.pageObject.ts*'],
       rules: {
         'import/no-extraneous-dependencies': 'off',
       },

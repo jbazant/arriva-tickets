@@ -68,7 +68,6 @@
       "eslint --fix",
       "prettier --write -u"
     ],
-    "**/*.{ts,tsx}": "tsc-files --noEmit",
     "**/*.{json}": "eslint --fix"
   },
   "jest": {

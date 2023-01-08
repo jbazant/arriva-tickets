@@ -48,6 +48,8 @@ export function LoginForm() {
             onChangeText={handleChange('username')}
             keyboardType="email-address"
             isDisabled={authMutation.isLoading}
+            placeholder="joe.doe@example.com"
+            testID="Login-Username"
           />
         </Stack>
       </FormControl>
@@ -58,6 +60,8 @@ export function LoginForm() {
             value={values.password}
             onChangeText={handleChange('password')}
             isDisabled={authMutation.isLoading}
+            placeholder="Heslo"
+            testID="Login-Password"
           />
           <FormControl.ErrorMessage leftIcon={<WarningOutlineIcon size="xs" />} mx={5}>
             {formError}
