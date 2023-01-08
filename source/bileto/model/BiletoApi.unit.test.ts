@@ -1,5 +1,5 @@
 import nock from 'nock';
-import moment from 'moment';
+import { DateTime } from 'luxon';
 import { BiletoApi } from './BiletoApi';
 
 describe('ApiReader', () => {
@@ -55,7 +55,9 @@ describe('ApiReader', () => {
       scope.done();
       expect(response.accessToken).toBe('ACCESS_TOKEN');
       expect(response.refreshToken).toBe('REFRESH_TOKEN');
-      expect(response.expiresAt.diff(moment().add(3600, 's'), 's')).toBe(0);
+      const expectedDateTime = DateTime.now().plus({ seconds: 3600 });
+      const dateTimeDiff = response.expiresAt.diff(expectedDateTime, 'seconds').toObject();
+      expect(dateTimeDiff.seconds).toBeCloseTo(0, 1);
     });
   });
 

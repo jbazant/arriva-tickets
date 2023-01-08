@@ -1,4 +1,4 @@
-import moment from 'moment';
+import { DateTime } from 'luxon';
 import axios, { AxiosInstance, AxiosRequestConfig } from 'axios';
 import { AuthResult, TicketData, UserInfoResult } from '../types';
 
@@ -48,7 +48,7 @@ export class BiletoApi {
     const { data } = await this._axios.post<{
       access_token: string;
       refresh_token: string;
-      expires_in: string;
+      expires_in: number;
     }>('/oauth/auth', {
       grant_type: 'password',
       client_id,
@@ -62,7 +62,7 @@ export class BiletoApi {
       password,
       accessToken: data.access_token,
       refreshToken: data.refresh_token,
-      expiresAt: moment().add(data.expires_in, 's'),
+      expiresAt: DateTime.now().plus({ second: data.expires_in }),
     };
   };
 

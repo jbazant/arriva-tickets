@@ -1,11 +1,11 @@
-import { Moment } from 'moment';
+import { DateTime } from 'luxon';
 
 export type AuthResult = {
   username: string;
   password: string;
   accessToken: string;
   refreshToken: string;
-  expiresAt: Moment;
+  expiresAt: DateTime;
 };
 
 export type TicketData = {

@@ -1,4 +1,4 @@
-import moment from 'moment/moment';
+import { DateTime } from 'luxon';
 import { nockToBileto } from '../../../jest/testUtils';
 import { LoginFormPageObject } from './LoginForm.pageObject';
 
@@ -38,7 +38,7 @@ describe('LoginForm', () => {
         password: 'PASSWORD',
         accessToken: 'ACCESS_TOKEN',
         refreshToken: 'REFRESH_TOKEN',
-        expiresAt: moment(),
+        expiresAt: DateTime.now().plus({ second: 1e3 }),
       });
 
     pageObject.render();
