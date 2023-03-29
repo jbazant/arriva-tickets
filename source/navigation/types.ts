@@ -5,8 +5,3 @@ export type MainTabsParamList = {
   Info: undefined;
   Profile: undefined;
 };
-
-export type AppNavigatorParamList = {
-  MainTabs: undefined;
-  LoginScreen: undefined;
-};

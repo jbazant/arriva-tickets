@@ -1,6 +1,8 @@
 import { useState } from 'react';
+import { useMountedFlag } from './useMountedFlag';
 
 export function useForm<T, K extends keyof T>(defaultValues: T) {
+  const getMounted = useMountedFlag();
   const [values, setValues] = useState(defaultValues);
   const [formError, setFormError] = useState<string | undefined>(undefined);
   const [isSubmitting, setSubmitting] = useState(false);
@@ -10,19 +12,28 @@ export function useForm<T, K extends keyof T>(defaultValues: T) {
     setFormError(undefined);
   };
 
-  const handleSubmit = (callback: (data: T) => Promise<void>) => async () => {
+  const onSubmit = (callback: (data: T) => any) => () => {
+    callback(values);
+  };
+
+  const handleSubmit = (callback: (data: T) => Promise<any>) => async () => {
     setSubmitting(true);
+
     try {
       await callback(values);
     } catch (e) {
       console.warn('submit callback should never throw', e.message);
     }
-    setSubmitting(false);
+
+    if (getMounted()) {
+      setSubmitting(false);
+    }
   };
 
   return {
     formError,
     handleChange,
+    onSubmit,
     handleSubmit,
     isSubmitting,
     setFormError,
