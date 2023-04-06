@@ -1,4 +1,4 @@
-import { Entypo } from '@native-base/icons';
+import Entypo from '@expo/vector-icons/Entypo';
 import { extendTheme } from 'native-base';
 
 export const COLORS = {

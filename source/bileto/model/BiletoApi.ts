@@ -1,5 +1,5 @@
 import { DateTime } from 'luxon';
-import axios, { AxiosInstance, AxiosRequestConfig } from 'axios';
+import axios, { AxiosInstance, InternalAxiosRequestConfig } from 'axios';
 import { AuthResult, TicketData, UserInfoResult } from '../types';
 
 type BiletoApiConfigShape = {
@@ -29,7 +29,7 @@ export class BiletoApi {
     this.token = token;
   }
 
-  authTokenInterceptor = (config: AxiosRequestConfig): AxiosRequestConfig => {
+  authTokenInterceptor = (config: InternalAxiosRequestConfig): InternalAxiosRequestConfig => {
     if (this.token) {
       config.headers['Authorization'] = this.token;
     }
