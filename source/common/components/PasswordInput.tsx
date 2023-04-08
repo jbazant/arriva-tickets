@@ -1,12 +1,20 @@
 import { Icon, IInputProps, Input, Pressable } from 'native-base';
-import { useState } from 'react';
+import { forwardRef, useState } from 'react';
 
-export function PasswordInput(props: Omit<IInputProps, 'type' | 'InputRightElement'>) {
+export const PasswordInput = forwardRef<
+  typeof Input,
+  Omit<IInputProps, 'type' | 'InputRightElement'>
+>(function (props, ref) {
   const [passwordVisible, setPasswordVisible] = useState(false);
 
   return (
     <Input
+      ref={ref}
       type={passwordVisible ? 'text' : 'password'}
+      placeholder="Heslo"
+      autoComplete="off"
+      autoCapitalize="none"
+      autoCorrect={false}
       InputRightElement={
         <Pressable
           onPress={() => setPasswordVisible((isVisible) => !isVisible)}
@@ -21,4 +29,4 @@ export function PasswordInput(props: Omit<IInputProps, 'type' | 'InputRightEleme
       {...props}
     />
   );
-}
+});
