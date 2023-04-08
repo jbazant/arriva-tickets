@@ -12,11 +12,14 @@ module.exports = {
       parserOptions: {
         project: ['./tsconfig.json'],
       },
-      plugins: ['@typescript-eslint'],
+      plugins: ['@typescript-eslint', '@tanstack/query'],
       rules: {
         'react/react-in-jsx-scope': 'off',
         'react-native/no-raw-text': 'off',
         'react-native-a11y/has-accessibility-hint': 'off',
+        'jest/no-disabled-tests': 'off',
+        '@tanstack/query/exhaustive-deps': 'error',
+        '@tanstack/query/prefer-query-object-syntax': 'error',
       },
     },
     {

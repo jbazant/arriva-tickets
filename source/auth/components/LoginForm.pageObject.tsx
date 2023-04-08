@@ -39,15 +39,14 @@ export class LoginFormPageObject {
   }
 
   expectInvalidCredentialsErrorDisplayed() {
-    const { getByText } = this.form;
-
-    expect(getByText('Neplatné přihlašovací údaje')).toBeTruthy();
+    const { findByText } = this.form;
+    return findByText('Neplatné přihlašovací údaje');
   }
 
   waitForFormToResolve() {
     const { queryByText } = this.form;
     return waitFor(() => {
-      return expect(queryByText('Přihlašuji')).toBeNull();
+      expect(queryByText('Přihlašuji')).toBeNull();
     });
   }
 }

@@ -1,3 +1,4 @@
+import { act } from '@testing-library/react-native';
 import { DateTime } from 'luxon';
 import { nockToBileto } from '../../../jest/testUtils';
 import { LoginFormPageObject } from './LoginForm.pageObject';
@@ -43,14 +44,15 @@ describe('LoginForm', () => {
 
     pageObject.render();
     pageObject.fillAndSubmit();
-    await pageObject.waitForFormToResolve();
+    await act(async () => {
+      await pageObject.waitForFormToResolve();
+    });
 
     scope.done();
   });
 
-  // todo wtf?
   // eslint-disable-next-line jest/expect-expect
-  it.skip('should display error on wrong credentials', async () => {
+  it('should display error on wrong credentials', async () => {
     const scope = nockToBileto()
       .filteringRequestBody(/"(client_[a-z]+)":"[^"]+"/g, '"$1":"ANY"')
       .post('/oauth/auth', {
@@ -66,9 +68,10 @@ describe('LoginForm', () => {
 
     pageObject.render();
     pageObject.fillAndSubmit();
-    await pageObject.waitForFormToResolve();
 
+    await act(async () => {
+      await pageObject.expectInvalidCredentialsErrorDisplayed();
+    });
     scope.done();
-    pageObject.expectInvalidCredentialsErrorDisplayed();
   });
 });

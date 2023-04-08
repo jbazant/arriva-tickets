@@ -1,6 +1,10 @@
 // @ts-ignore
 import { version } from '../package.json';
 
+const MINUTE = 1e3 * 60;
+const DAY = MINUTE * 60 * 24;
+const MONTH = DAY * 30;
+
 export const config = {
   appVersion: version,
   api: {
@@ -13,4 +17,13 @@ export const config = {
   },
   authorEmail: 'j.bazant@gmail.com',
   refreshInterval: 3e4,
+  locale: 'cs-CZ',
+  queryClient: {
+    defaultOptions: {
+      queries: {
+        cacheTime: MONTH,
+        staleTime: 15 * MINUTE,
+      },
+    },
+  },
 };

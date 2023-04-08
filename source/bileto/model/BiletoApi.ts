@@ -66,51 +66,57 @@ export class BiletoApi {
     };
   };
 
-  loadTickets(userId: string): Promise<TicketData[]> {
-    return this._axios
-      .get(`/customers/${userId}/orders`, {
-        params: {
-          with: 'Items.Transactions.Item.Seat,Items.Transactions.Leg.DepartureStation,Items.Transactions.Leg.ArrivalStation',
-          sort: '-CreatedAt',
-          limit: 5,
-        },
-      })
-      .then(({ data }) =>
-        data.reduce((acc: Array<TicketData>, order: Record<string, any>) => {
-          if (order.Items) {
-            const orderCode = order.Code;
-            order.Items.forEach((item: Record<string, any>) => {
-              if (item.Completed && item.Transactions[0]) {
-                item.Transactions.forEach(({ Item, Leg }: Record<string, any>) => {
-                  const ticketId = Item?.Id || item.ItemId || item.Id;
+  loadTickets = async (userId: string): Promise<TicketData[]> => {
+    const { data } = await this._axios.get(`/customers/${userId}/orders`, {
+      params: {
+        with: 'Items.Transactions.Item.Seat,Items.Transactions.Leg.DepartureStation,Items.Transactions.Leg.ArrivalStation',
+        sort: '-CreatedAt',
+        limit: 5,
+      },
+    });
 
-                  acc.push({
-                    from: Leg.DepartureStation.Name,
-                    to: Leg.ArrivalStation.Name,
-                    departure: Leg.DepartureAt,
-                    connectionId: Leg.ArrivalAt,
-                    code: Item?.Code,
-                    seat: Item?.Seat?.Label,
-                    orderId: orderCode,
-                    ticketId: ticketId,
-                    valid: !item.CancelledAt,
-                  });
-                });
-              }
+    return data.reduce((acc: Array<TicketData>, order: Record<string, any>) => {
+      if (order.Items) {
+        const orderCode = order.Code;
+        order.Items.forEach((item: Record<string, any>) => {
+          if (item.Completed && item.Transactions[0]) {
+            item.Transactions.forEach(({ Item, Leg }: Record<string, any>) => {
+              const ticketId = Item?.Id || item.ItemId || item.Id;
+
+              acc.push({
+                from: Leg.DepartureStation.Name,
+                to: Leg.ArrivalStation.Name,
+                departure: Leg.DepartureAt,
+                connectionId: Leg.ArrivalAt,
+                code: Item?.Code,
+                seat: Item?.Seat?.Label,
+                orderId: orderCode,
+                ticketId: ticketId,
+                valid: !item.CancelledAt,
+              });
             });
           }
-          return acc;
-        }, []),
-      );
-  }
+        });
+      }
+      return acc;
+    }, []);
+  };
 
-  loadUser(): Promise<UserInfoResult> {
-    return this._axios.get(`/users/current`, {}).then(({ data }) => ({
+  loadUser = async (): Promise<UserInfoResult> => {
+    const { data } = await this._axios.get<{
+      Id: string;
+      Email: string;
+      Firstname: string | undefined;
+      Lastname: string | undefined;
+      CreditBalance: number;
+    }>('/users/current', {});
+
+    return {
       userId: data.Id,
       email: data.Email,
       firstname: data.Firstname,
       lastname: data.Lastname,
       credit: data.CreditBalance,
-    }));
-  }
+    };
+  };
 }

@@ -1,4 +1,5 @@
 import { renderHook, act } from '@testing-library/react-hooks';
+import { waitFor } from '@testing-library/react-native';
 import { useContext } from 'react';
 import { UserProvider } from '../../auth/components/UserProvider';
 import { useUserControls } from '../../auth/hooks/useUserData';
@@ -28,14 +29,16 @@ describe('BiletoApiProvider', () => {
       },
     );
 
-  it('should retun null token on startup', () => {
+  it('should return null token on startup', async () => {
     const { result } = renderBiletoHook();
+    await waitFor(() => expect(result.current.user.isFetching).toBe(false));
 
     expect(result.current.biletoApi.token).toBe(null);
   });
 
   it('should observe for user login', async () => {
     const { result } = renderBiletoHook();
+    await waitFor(() => expect(result.current.user.isFetching).toBe(false));
 
     act(() => {
       result.current.user.persist({ username: 'USERNAME', token: 'TOKEN', password: 'PASSWORD' });
@@ -44,8 +47,9 @@ describe('BiletoApiProvider', () => {
     expect(result.current.biletoApi.token).toBe('TOKEN');
   });
 
-  it('should observe for user logout', () => {
+  it('should observe for user logout', async () => {
     const { result } = renderBiletoHook();
+    await waitFor(() => expect(result.current.user.isFetching).toBe(false));
 
     act(() => {
       result.current.user.persist({ username: 'USERNAME', token: 'TOKEN', password: 'PASSWORD' });
@@ -57,8 +61,9 @@ describe('BiletoApiProvider', () => {
     expect(result.current.biletoApi.token).toBe(null);
   });
 
-  it('should observe for token changes', () => {
+  it('should observe for token changes', async () => {
     const { result } = renderBiletoHook();
+    await waitFor(() => expect(result.current.user.isFetching).toBe(false));
 
     act(() => {
       result.current.user.persist({ username: 'USERNAME', token: 'TOKEN', password: 'PASSWORD' });

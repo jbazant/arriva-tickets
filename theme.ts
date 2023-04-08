@@ -4,7 +4,7 @@ import { extendTheme } from 'native-base';
 export const COLORS = {
   main: '#00becd',
   dark: '#333',
-  secondary: '#c7f5f3',
+  //secondary: '#c7f5f3',
   white: '#fff',
   muted: '#666',
   tabBarInactive: '#aaa',
@@ -50,6 +50,13 @@ export const theme = extendTheme({
       defaultProps: {
         m: 3,
         mt: 1,
+      },
+    },
+    Skeleton: {
+      defaultProps: {
+        startColor: 'coolGray.300',
+        endColor: 'coolGray.100',
+        borderRadius: 3,
       },
     },
     Text: {

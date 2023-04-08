@@ -3,5 +3,4 @@ export type MainTabsParamList = {
   FutureTickets: undefined;
   PastTickets: undefined;
   Info: undefined;
-  Profile: undefined;
 };

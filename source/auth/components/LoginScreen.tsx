@@ -1,4 +1,4 @@
-import { Center, Divider, Heading, KeyboardAvoidingView } from 'native-base';
+import { Divider, Heading, KeyboardAvoidingView } from 'native-base';
 import { Card } from '../../common/components/Card';
 import { ScreenWrap } from '../../common/components/ScreenWrap';
 import { LoginForm } from './LoginForm';

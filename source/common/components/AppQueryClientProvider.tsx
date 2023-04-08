@@ -3,6 +3,7 @@ import { createAsyncStoragePersister } from '@tanstack/query-async-storage-persi
 import { onlineManager, QueryClient } from '@tanstack/react-query';
 import NetInfo from '@react-native-community/netinfo';
 import { PersistQueryClientProvider } from '@tanstack/react-query-persist-client';
+import { config } from '../../config';
 
 type Props = {
   children: JSX.Element | JSX.Element[];
@@ -12,13 +13,7 @@ onlineManager.setEventListener((setOnline) =>
   NetInfo.addEventListener((state) => setOnline(Boolean(state.isConnected))),
 );
 
-const queryClient = new QueryClient({
-  defaultOptions: {
-    queries: {
-      cacheTime: Infinity,
-    },
-  },
-});
+const queryClient = new QueryClient(config.queryClient);
 
 const asyncStoragePersister = createAsyncStoragePersister({
   storage: AsyncStorage,
