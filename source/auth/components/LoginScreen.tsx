@@ -1,4 +1,4 @@
-import { Center, Divider, Heading } from 'native-base';
+import { Divider, Heading, KeyboardAvoidingView } from 'native-base';
 import { Card } from '../../common/components/Card';
 import { ScreenWrap } from '../../common/components/ScreenWrap';
 import { LoginForm } from './LoginForm';
@@ -6,14 +6,14 @@ import { LoginForm } from './LoginForm';
 export function LoginScreen() {
   return (
     <ScreenWrap>
-      <Center flex={1}>
-        <Card alignItems="center">
+      <KeyboardAvoidingView>
+        <Card alignItems="center" mt={20}>
           <Heading>Jízdenky Arriva</Heading>
           <Heading size="md">Neoficiální klient</Heading>
           <Divider />
           <LoginForm />
         </Card>
-      </Center>
+      </KeyboardAvoidingView>
     </ScreenWrap>
   );
 }

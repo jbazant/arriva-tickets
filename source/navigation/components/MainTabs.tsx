@@ -1,7 +1,6 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { COLORS } from '../../../theme';
-import { InfoTab } from '../../info/components/InfoTab';
-import { ProfileTab } from '../../profile/components/ProfileTab';
+import { InfoStack } from '../../info/components/InfoStack';
 import { FutureTicketsTab } from '../../tickets/components/FutureTicketsTab';
 import { PastTicketsTab } from '../../tickets/components/PastTicketsTab';
 import { RecentTicketsTab } from '../../tickets/components/RecentTickets/RecentTicketsTab';
@@ -23,7 +22,7 @@ export function MainTabs() {
       }}
     >
       <Tab.Screen
-        name={'RecentTickets'}
+        name="RecentTickets"
         component={RecentTicketsTab}
         options={{
           tabBarIcon: (props) => <TabIcon name="stopwatch" {...props} />,
@@ -31,7 +30,7 @@ export function MainTabs() {
         }}
       />
       <Tab.Screen
-        name={'FutureTickets'}
+        name="FutureTickets"
         component={FutureTicketsTab}
         options={{
           tabBarIcon: (props) => <TabIcon name="documents" {...props} />,
@@ -39,7 +38,7 @@ export function MainTabs() {
         }}
       />
       <Tab.Screen
-        name={'PastTickets'}
+        name="PastTickets"
         component={PastTicketsTab}
         options={{
           tabBarIcon: (props) => <TabIcon name="archive" {...props} />,
@@ -47,19 +46,11 @@ export function MainTabs() {
         }}
       />
       <Tab.Screen
-        name={'Info'}
-        component={InfoTab}
+        name="Info"
+        component={InfoStack}
         options={{
-          tabBarIcon: (props) => <TabIcon name="info" {...props} />,
-          tabBarLabel: 'Info',
-        }}
-      />
-      <Tab.Screen
-        name={'Profile'}
-        component={ProfileTab}
-        options={{
-          tabBarIcon: (props) => <TabIcon name="user" {...props} />,
-          tabBarLabel: 'Profil',
+          tabBarIcon: (props) => <TabIcon name="dots-three-horizontal" {...props} />,
+          tabBarLabel: 'Více',
         }}
       />
     </Tab.Navigator>

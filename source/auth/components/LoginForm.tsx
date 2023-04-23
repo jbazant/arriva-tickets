@@ -1,7 +1,9 @@
 import { useMutation } from '@tanstack/react-query';
 import { Box, Button, FormControl, Input, Stack, WarningOutlineIcon } from 'native-base';
+import { useRef } from 'react';
 import { useBiletoApi } from '../../bileto/hooks/useBiletoApi';
 import { PasswordInput } from '../../common/components/PasswordInput';
+import { UsernameInput } from '../../common/components/UsernameInput';
 import { useForm } from '../../common/hooks/useForm';
 import { useUserControls } from '../hooks/useUserData';
 
@@ -15,6 +17,7 @@ export function LoginForm() {
 
   const biletoApi = useBiletoApi();
   const { persist } = useUserControls();
+  const passRef = useRef<typeof Input>();
 
   const authMutation = useMutation({
     mutationFn: biletoApi.authUser,
@@ -36,6 +39,7 @@ export function LoginForm() {
     },
   });
 
+  const submitForm = onSubmit(authMutation.mutate);
   const isButtonDisabled = !(values.username && values.password);
 
   return (
@@ -43,13 +47,15 @@ export function LoginForm() {
       <FormControl isRequired isInvalid={!!formError}>
         <Stack>
           <FormControl.Label mx={5}>Váš e-mail</FormControl.Label>
-          <Input
+          <UsernameInput
             value={values.username}
             onChangeText={handleChange('username')}
-            keyboardType="email-address"
             isDisabled={authMutation.isLoading}
-            placeholder="joe.doe@example.com"
             testID="Login-Username"
+            onSubmitEditing={() => {
+              // @ts-ignore - focus() doesn't exist on the new TS type of TextInput, but I guess it works....
+              passRef.current?.focus();
+            }}
           />
         </Stack>
       </FormControl>
@@ -57,11 +63,16 @@ export function LoginForm() {
         <Stack>
           <FormControl.Label mx={5}>Heslo</FormControl.Label>
           <PasswordInput
+            ref={passRef}
             value={values.password}
             onChangeText={handleChange('password')}
             isDisabled={authMutation.isLoading}
-            placeholder="Heslo"
             testID="Login-Password"
+            onSubmitEditing={() => {
+              if (values.username && values.password) {
+                submitForm();
+              }
+            }}
           />
           <FormControl.ErrorMessage leftIcon={<WarningOutlineIcon size="xs" />} mx={5}>
             {formError}
@@ -73,7 +84,7 @@ export function LoginForm() {
         mb={0}
         variant="solid"
         size="lg"
-        onPress={onSubmit(authMutation.mutate)}
+        onPress={submitForm}
         isLoading={authMutation.isLoading}
         spinnerPlacement="end"
         isLoadingText="Přihlašuji"

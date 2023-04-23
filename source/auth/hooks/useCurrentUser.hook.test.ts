@@ -1,4 +1,5 @@
 import { act, renderHook } from '@testing-library/react-hooks';
+import { waitFor } from '@testing-library/react-native';
 import * as SecureStore from 'expo-secure-store';
 import { useCurrentUser } from './useCurrentUser';
 import Mock = jest.Mock;
@@ -9,28 +10,29 @@ jest.mock('expo-secure-store', () => ({
   deleteItemAsync: jest.fn(() => Promise.resolve()),
 }));
 
-describe('useCurrentuser', () => {
+describe('useCurrentUser', () => {
   beforeEach(() => {
     jest.clearAllMocks();
   });
 
   describe('data loading', () => {
-    it('should load data from securestore on mount', () => {
-      renderHook(useCurrentUser);
+    it('should load data from securestore on mount', async () => {
+      const { result } = renderHook(useCurrentUser);
       expect(SecureStore.getItemAsync).toHaveBeenCalledWith('user');
+      await waitFor(() => expect(result.current.isFetching).toBe(false));
     });
 
-    it('should return fetching state on mount', () => {
-      const {
-        result: { current },
-      } = renderHook(useCurrentUser);
+    it('should return fetching state on mount', async () => {
+      const { result } = renderHook(useCurrentUser);
 
-      expect(current).toStrictEqual({
+      expect(result.current).toStrictEqual({
         isFetching: true,
         persist: expect.any(Function),
         clear: expect.any(Function),
         hasUser: false,
       });
+
+      await waitFor(() => expect(result.current.isFetching).toBe(false));
     });
 
     it('should return user data once getItemAsync is resolved', async () => {
