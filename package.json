@@ -29,6 +29,7 @@
     "expo": "^48.0.0",
     "expo-secure-store": "~12.1.1",
     "expo-status-bar": "~1.4.4",
+    "expo-updates": "~0.16.4",
     "luxon": "^3.2.1",
     "native-base": "^3.4.8",
     "react": "18.2.0",
