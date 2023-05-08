@@ -12,7 +12,8 @@
       "backgroundColor": "#00becd"
     },
     "updates": {
-      "fallbackToCacheTimeout": 0
+      "fallbackToCacheTimeout": 0,
+      "url": "https://u.expo.dev/21958518-fe9a-4efe-97dc-befb95069a42"
     },
     "assetBundlePatterns": ["**/*"],
     "ios": {
@@ -22,10 +23,19 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.bazantj.arrivatickets"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "21958518-fe9a-4efe-97dc-befb95069a42"
+      }
+    },
+    "runtimeVersion": {
+      "policy": "sdkVersion"
     }
   }
 }
