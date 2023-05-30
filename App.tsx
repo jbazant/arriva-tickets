@@ -6,6 +6,7 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { BiletoApiProvider } from './source/bileto/components/BiletoApiProvider';
 import { AppQueryClientProvider } from './source/common/components/AppQueryClientProvider';
 import { UserProvider } from './source/auth/components/UserProvider';
+import { UserInfoProvider } from './source/info/components/UserInfoProvider';
 import { RootStack } from './source/navigation/components/RootStack';
 import { theme } from './theme';
 
@@ -17,9 +18,11 @@ export default function App() {
         <AppQueryClientProvider>
           <UserProvider>
             <BiletoApiProvider>
-              <NavigationContainer>
-                <RootStack />
-              </NavigationContainer>
+              <UserInfoProvider>
+                <NavigationContainer>
+                  <RootStack />
+                </NavigationContainer>
+              </UserInfoProvider>
             </BiletoApiProvider>
           </UserProvider>
         </AppQueryClientProvider>

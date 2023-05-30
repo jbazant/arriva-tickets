@@ -1,16 +1,11 @@
-import { useQuery } from '@tanstack/react-query';
 import { Spinner, VStack } from 'native-base';
 import React from 'react';
-import { useBiletoApi } from '../../bileto/hooks/useBiletoApi';
 import { FetchError } from '../../common/components/ListItem/FetchError';
+import { useUserInfo } from '../hooks/useUserInfo';
 import { UserInfoData } from './UserInfoData';
 
 export function UserInfo() {
-  const biletoApi = useBiletoApi();
-  const { data, isLoadingError, refetch, isSuccess, isRefetching, isRefetchError } = useQuery({
-    queryKey: ['profile'],
-    queryFn: biletoApi.loadUser,
-  });
+  const { data, isLoadingError, refetch, isSuccess, isRefetching, isRefetchError } = useUserInfo();
 
   return (
     <VStack alignSelf="stretch" mx={3}>
