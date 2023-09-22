@@ -87,7 +87,7 @@ export class BiletoApi {
                 from: Leg.DepartureStation.Name,
                 to: Leg.ArrivalStation.Name,
                 departure: Leg.DepartureAt,
-                connectionId: Leg.ArrivalAt,
+                arrival: Leg.ArrivalAt,
                 code: Item?.Code,
                 seat: Item?.Seat?.Label,
                 orderId: orderCode,

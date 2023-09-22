@@ -8,6 +8,7 @@ import { AppQueryClientProvider } from './source/common/components/AppQueryClien
 import { UserProvider } from './source/auth/components/UserProvider';
 import { UserInfoProvider } from './source/info/components/UserInfoProvider';
 import { RootStack } from './source/navigation/components/RootStack';
+import { TicketsDataProvider } from './source/tickets/components/TicketsDataProvider';
 import { theme } from './theme';
 
 export default function App() {
@@ -19,9 +20,11 @@ export default function App() {
           <UserProvider>
             <BiletoApiProvider>
               <UserInfoProvider>
-                <NavigationContainer>
-                  <RootStack />
-                </NavigationContainer>
+                <TicketsDataProvider>
+                  <NavigationContainer>
+                    <RootStack />
+                  </NavigationContainer>
+                </TicketsDataProvider>
               </UserInfoProvider>
             </BiletoApiProvider>
           </UserProvider>

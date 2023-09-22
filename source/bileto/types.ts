@@ -12,7 +12,7 @@ export type TicketData = {
   readonly from: string;
   readonly to: string;
   readonly departure: string;
-  readonly connectionId: string;
+  readonly arrival: string;
   readonly code?: string;
   readonly seat?: string;
   readonly orderId: string;

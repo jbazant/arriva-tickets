@@ -1,18 +1,20 @@
-import { Box, Center, Heading, Text } from 'native-base';
-import { Card } from '../../common/components/Card';
+import { SectionList } from 'native-base';
 import { ScreenWrap } from '../../common/components/ScreenWrap';
+import { useFutureTickets } from '../hooks/useFutureTickets';
+import { DayRow } from './DayRow';
+import { Ticket } from './Ticket';
 
 export function FutureTicketsTab() {
+  const futureTickets = useFutureTickets();
+
   return (
     <ScreenWrap>
-      <Center flex={1}>
-        <Box alignSelf="stretch" alignItems="stretch">
-          <Card alignItems="center">
-            <Heading>Platné jízdenky</Heading>
-            <Text>TBD</Text>
-          </Card>
-        </Box>
-      </Center>
+      <SectionList
+        sections={futureTickets}
+        keyExtractor={(item) => item.ticketId}
+        renderSectionHeader={({ section: { title } }) => <DayRow date={title} />}
+        renderItem={({ item }) => <Ticket ticketData={item} />}
+      />
     </ScreenWrap>
   );
 }

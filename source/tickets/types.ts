@@ -1,3 +1,6 @@
+import { DateTime } from 'luxon';
+import { TicketData } from '../bileto/types';
+
 export enum TicketAgeEnum {
   Newborn,
   Toddler,
@@ -7,3 +10,8 @@ export enum TicketAgeEnum {
   Senior,
   Death,
 }
+
+export type TicketDataExt = Omit<TicketData, 'departure' | 'arrival'> & {
+  departure: DateTime;
+  arrival: DateTime;
+};
