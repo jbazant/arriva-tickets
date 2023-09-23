@@ -4,6 +4,7 @@ import { NativeBaseProvider } from 'native-base';
 import React, { useState } from 'react';
 import { UserDataContext } from '../source/auth/context/UserDataContext';
 import { BiletoApiProvider } from '../source/bileto/components/BiletoApiProvider';
+import { UserInfoProvider } from '../source/info/components/UserInfoProvider';
 
 const inset = {
   frame: { x: 0, y: 0, width: 0, height: 0 },
@@ -49,7 +50,9 @@ export function CommonProvidersForTests({ children, queryClient }: CommonProvide
       <QueryClientProvider client={queryClientLocal}>
         <UserDataContext.Provider value={userContext}>
           <BiletoApiProvider>
-            <NavigationContainer>{children}</NavigationContainer>
+            <UserInfoProvider>
+              <NavigationContainer>{children}</NavigationContainer>
+            </UserInfoProvider>
           </BiletoApiProvider>
         </UserDataContext.Provider>
       </QueryClientProvider>
