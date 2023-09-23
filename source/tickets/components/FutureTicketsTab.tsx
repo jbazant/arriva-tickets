@@ -1,18 +1,13 @@
-import { Box, Center, Heading, Text } from 'native-base';
-import { Card } from '../../common/components/Card';
 import { ScreenWrap } from '../../common/components/ScreenWrap';
+import { useFutureTickets } from '../hooks/useFutureTickets';
+import { TicketsByDayList } from './partials/TicketsByDayList';
 
 export function FutureTicketsTab() {
+  const futureTickets = useFutureTickets();
+
   return (
     <ScreenWrap>
-      <Center flex={1}>
-        <Box alignSelf="stretch" alignItems="stretch">
-          <Card alignItems="center">
-            <Heading>Platné jízdenky</Heading>
-            <Text>TBD</Text>
-          </Card>
-        </Box>
-      </Center>
+      <TicketsByDayList tickets={futureTickets} headerColor="textEmphatized" />
     </ScreenWrap>
   );
 }

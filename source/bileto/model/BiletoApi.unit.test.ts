@@ -77,7 +77,7 @@ describe('ApiReader', () => {
       const response = await biletoApi.loadTickets('USER_ID');
       expect(response).toEqual([
         {
-          connectionId: '2019-11-21T18:36:00+01:00',
+          arrival: '2019-11-21T18:36:00+01:00',
           departure: '2019-11-21T17:30:00+01:00',
           from: 'Praha, Nádraží Holešovice',
           orderId: 'RGBMKBZ',
@@ -86,7 +86,7 @@ describe('ApiReader', () => {
           valid: false,
         },
         {
-          connectionId: '2019-11-21T06:40:00+01:00',
+          arrival: '2019-11-21T06:40:00+01:00',
           departure: '2019-11-21T05:40:00+01:00',
           from: 'Teplice, Benešovo náměstí',
           orderId: 'RGBMKBZ',
@@ -96,7 +96,7 @@ describe('ApiReader', () => {
         },
         {
           code: 'VB4',
-          connectionId: '2019-11-18T06:40:00+01:00',
+          arrival: '2019-11-18T06:40:00+01:00',
           departure: '2019-11-18T05:40:00+01:00',
           from: 'Teplice, Benešovo náměstí',
           seat: '21',
@@ -107,7 +107,7 @@ describe('ApiReader', () => {
         },
         {
           code: 'X6R',
-          connectionId: '2019-11-05T22:38:00+01:00',
+          arrival: '2019-11-05T22:38:00+01:00',
           departure: '2019-11-05T21:30:00+01:00',
           from: 'Praha, Nádraží Holešovice',
           seat: '25',
