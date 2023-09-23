@@ -17,24 +17,24 @@ describe('utils', () => {
 
   const getTicketEntries = (): [DateTime, TicketDataExt[]][] => [
     [
-      DateTime.fromISO('2020-01-01T00:00:00.000+01:00'),
+      DateTime.fromISO('2020-01-01T00:00:00.000+0100'),
       [
-        getTicket('2020-01-01T10:00:00', '2020-01-01T11:00:00'),
-        getTicket('2020-01-01T12:00:00', '2020-01-01T13:00:00'),
+        getTicket('2020-01-01T10:00:00+0100', '2020-01-01T11:00:00+0100'),
+        getTicket('2020-01-01T12:00:00+0100', '2020-01-01T13:00:00+0100'),
       ],
     ],
     [
-      DateTime.fromISO('2020-01-02T00:00:00.000+01:00'),
-      [getTicket('2020-01-02T10:00:00', '2020-01-02T11:00:00')],
+      DateTime.fromISO('2020-01-02T00:00:00.000+0100'),
+      [getTicket('2020-01-02T10:00:00+0100', '2020-01-02T11:00:00+0100')],
     ],
   ];
 
   describe('groupTicketsByDay', () => {
     it('should group tickets by days', () => {
       const ticketsData: TicketDataExt[] = [
-        getTicket('2020-01-01T10:00:00', '2020-01-01T11:00:00'),
-        getTicket('2020-01-01T12:00:00', '2020-01-01T13:00:00'),
-        getTicket('2020-01-02T10:00:00', '2020-01-02T11:00:00'),
+        getTicket('2020-01-01T10:00:00+0100', '2020-01-01T11:00:00+0100'),
+        getTicket('2020-01-01T12:00:00+0100', '2020-01-01T13:00:00+0100'),
+        getTicket('2020-01-02T10:00:00+0100', '2020-01-02T11:00:00+0100'),
       ];
 
       expect(groupTicketsByDay(ticketsData)).toEqual(getTicketEntries());
@@ -47,13 +47,13 @@ describe('utils', () => {
         {
           title: 'Wednesday, January 1, 2020',
           data: [
-            getTicket('2020-01-01T10:00:00', '2020-01-01T11:00:00'),
-            getTicket('2020-01-01T12:00:00', '2020-01-01T13:00:00'),
+            getTicket('2020-01-01T10:00:00+0100', '2020-01-01T11:00:00+0100'),
+            getTicket('2020-01-01T12:00:00+0100', '2020-01-01T13:00:00+0100'),
           ],
         },
         {
           title: 'Thursday, January 2, 2020',
-          data: [getTicket('2020-01-02T10:00:00', '2020-01-02T11:00:00')],
+          data: [getTicket('2020-01-02T10:00:00+0100', '2020-01-02T11:00:00+0100')],
         },
       ]);
     });
