@@ -1,4 +1,4 @@
-import { DateTime } from 'luxon';
+import { DateTime, Settings } from 'luxon';
 import { TicketDataExt } from './types';
 import { groupTicketsByDay, ticketEntriesToSections } from './utils';
 
@@ -14,6 +14,8 @@ describe('utils', () => {
     departure: DateTime.fromISO(departure),
     arrival: DateTime.fromISO(arrival),
   });
+
+  Settings.defaultZone = 'Europe/Prague';
 
   const getTicketEntries = (): [DateTime, TicketDataExt[]][] => [
     [
