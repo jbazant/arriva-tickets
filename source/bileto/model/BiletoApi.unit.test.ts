@@ -77,7 +77,7 @@ describe('ApiReader', () => {
       const response = await biletoApi.loadTickets('USER_ID');
       expect(response).toEqual([
         {
-          connectionId: '2019-11-21T18:36:00+01:00',
+          arrival: '2019-11-21T18:36:00+01:00',
           departure: '2019-11-21T17:30:00+01:00',
           from: 'Praha, Nádraží Holešovice',
           orderId: 'RGBMKBZ',

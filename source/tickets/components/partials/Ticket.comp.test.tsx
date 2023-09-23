@@ -1,5 +1,6 @@
 import { render } from '@testing-library/react-native';
 import { DateTime } from 'luxon';
+import { CommonProvidersForTests } from '../../../../jest/CommonProvidersForTests';
 import { TicketDataExt } from '../../types';
 import { Ticket } from './Ticket';
 
@@ -17,7 +18,9 @@ describe('Ticket', () => {
       orderId: 'ORDER_ID',
     };
 
-    const { getByText } = render(<Ticket ticketData={ticketData} />);
+    const { getByText } = render(<Ticket ticketData={ticketData} />, {
+      wrapper: CommonProvidersForTests,
+    });
 
     expect(getByText('Moscow')).toBeTruthy();
     expect(getByText('London')).toBeTruthy();
