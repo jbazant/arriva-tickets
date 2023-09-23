@@ -15,3 +15,8 @@ export type TicketDataExt = Omit<TicketData, 'departure' | 'arrival'> & {
   departure: DateTime;
   arrival: DateTime;
 };
+
+export type TicketsByDay = {
+  title: string;
+  data: TicketDataExt[];
+}[];
