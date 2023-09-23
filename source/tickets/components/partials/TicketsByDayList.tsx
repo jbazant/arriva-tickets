@@ -1,4 +1,5 @@
 import { SectionList } from 'native-base';
+import { useTickets } from '../../hooks/useTickets';
 import { TicketsByDay } from '../../types';
 import { DayRow } from './DayRow';
 import { NoTickets } from './NoTickets';
@@ -10,6 +11,8 @@ type TicketsByDayListProps = {
 };
 
 export function TicketsByDayList({ tickets, headerColor }: TicketsByDayListProps) {
+  const { refetch, isRefetching } = useTickets();
+
   return (
     <SectionList
       sections={tickets}
@@ -17,6 +20,8 @@ export function TicketsByDayList({ tickets, headerColor }: TicketsByDayListProps
       renderSectionHeader={({ section: { title } }) => <DayRow date={title} color={headerColor} />}
       renderItem={({ item }) => <Ticket ticketData={item} />}
       ListEmptyComponent={NoTickets}
+      onRefresh={refetch}
+      refreshing={isRefetching}
     />
   );
 }
