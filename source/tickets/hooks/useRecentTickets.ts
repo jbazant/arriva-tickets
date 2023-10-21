@@ -1,9 +1,9 @@
 import { DateTime } from 'luxon';
+import { useEffect, useState } from 'react';
 import { TicketDataExt } from '../types';
 import { useTicketsData } from './useTickets';
 
-export function useRecentTickets(): TicketDataExt[] {
-  const tickets = useTicketsData();
+function filterRecentTickets(tickets: TicketDataExt[]): TicketDataExt[] {
   const from = DateTime.now().minus({ minutes: 10 });
 
   return tickets.reduce((acc, ticket) => {
@@ -26,4 +26,18 @@ export function useRecentTickets(): TicketDataExt[] {
 
     return acc;
   }, [] as typeof tickets);
+}
+
+export function useRecentTickets(): TicketDataExt[] {
+  const tickets = useTicketsData();
+  const [recentTickets, setRecentTickets] = useState<TicketDataExt[]>([]);
+
+  useEffect(() => {
+    setRecentTickets(filterRecentTickets(tickets));
+    const interval = setInterval(() => setRecentTickets(filterRecentTickets(tickets)), 1e4);
+
+    return () => clearInterval(interval);
+  }, [tickets]);
+
+  return recentTickets;
 }

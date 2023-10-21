@@ -1,5 +1,5 @@
 import { renderHook } from '@testing-library/react-hooks';
-import { DateTime } from 'luxon';
+import { createTicket } from '../../../jest/testUtils';
 import { useRecentTickets } from './useRecentTickets';
 import { type useTicketsData } from './useTickets';
 
@@ -10,18 +10,6 @@ jest.mock('./useTickets', () => ({
 }));
 
 describe('useRecentTickets', () => {
-  const createTicket = (departure: string, seat = '1') => ({
-    departure: DateTime.fromISO(departure),
-    arrival: DateTime.fromISO(departure).plus({ hours: 1 }),
-    seat,
-    from: 'Praha',
-    to: 'Brno',
-    ticketId: '1',
-    orderId: '1',
-    valid: true,
-    code: 'AAA',
-  });
-
   beforeAll(() => {
     jest.useFakeTimers().setSystemTime(new Date('2020-01-11T12:00:00'));
   });

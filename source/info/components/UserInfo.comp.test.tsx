@@ -99,7 +99,8 @@ describe('UserInfo', () => {
 
     await findByText('Chyba při načítání dat.');
     await act(async () => {
-      await fireEvent.press(getByLabelText('Opakovat'));
+      const reloadButton = getByLabelText('Opakovat');
+      fireEvent.press(reloadButton);
       await findByText('joe.doe@example.com');
     });
     scope.done();

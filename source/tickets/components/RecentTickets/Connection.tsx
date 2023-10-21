@@ -8,7 +8,6 @@ type ConnectionProps = {
 export function Connection({ from, to }: ConnectionProps) {
   return (
     <Center>
-      <Text>Spoj:</Text>
       <Text bold>{from}</Text>
       <Icon name="arrow-long-down" />
       <Text bold>{to}</Text>

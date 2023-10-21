@@ -4,6 +4,7 @@ import { useTickets } from '../../hooks/useTickets';
 
 export function NoTickets() {
   const { refetch, isRefetching } = useTickets();
+
   return (
     <ScreenWrap>
       <Center>
